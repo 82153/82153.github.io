@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "구름 Level Knight's Move"
+title: "[구름 Level] Knight's Move"
 categories: coding_test
 ---
 [문제](https://level.goorm.io/exam/43063/knight-s-move/quiz/1)
