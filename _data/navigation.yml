@@ -1,7 +1,5 @@
 # main links
 main:
-  - title: "Home"
-    url: https://82153.github.io
   - title: "Category"
     url: "/categories/"
   # - title: "Sample Posts"
