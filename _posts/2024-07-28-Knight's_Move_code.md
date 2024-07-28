@@ -27,7 +27,7 @@ def bfs(graph, start, n, m): # bfs 함수 구현
                 visited.append([ny, nx])
                 queue.append([ny, nx])
 
-                # 체스판에서 이전 위치에 1을 더한 값을 새로운 위치에 저장
+                # 체스판에서 이전 위치에 1을 더한 값을 새로운 위치에 저장(즉, 이동한 횟수를 나타내게 됨)
                 graph[ny][nx] = graph[tmp[0]][tmp[1]] + 1
     return route
 
@@ -40,7 +40,7 @@ chess = [[0]*m for _ in range(n)]
 move = bfs(chess, [0,0], n, m)
 cnt = 0
 
-# 체스판에서 가장 큰수를 찾음
+# 체스판에서 가장 큰수를 찾음(즉, 최대 이동횟수를 찾음)
 for i in chess:
     cnt = max(cnt, max(i))
 
