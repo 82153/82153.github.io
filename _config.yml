@@ -22,7 +22,7 @@ title_separator          : "-"
 future                   : true
 published                : true
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
+name                     : "82153"
 description              : "An amazing website."
 url                      : "https://82153.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
