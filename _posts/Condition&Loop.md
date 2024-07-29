@@ -1,3 +1,8 @@
+---
+layout: single
+title: "[Python Basic] Condition & Loop"
+categories: Python_Basic
+---
 # 조건문과 반복문
 
 ### 조건문
