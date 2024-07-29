@@ -1,3 +1,8 @@
+---
+layout: single
+title: "[Python Basic] Function and Console I/O"
+categories: Python_Basic
+---
 # Function and Console I/O
 
 ### 함수
