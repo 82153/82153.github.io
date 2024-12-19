@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "[FastAPI] Background For FastAPI"
 date: 2024-12-12 11:12 +0900
 tags: [FastAPI]
