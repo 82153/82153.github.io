@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-- Github: [Github](https://www.google.com](https://github.com/82153/)
+- Github: ![Github](https://www.google.com](https://github.com/82153/)
 
 - Email: kdw6177@naver.com, kdw6177012@gmail.com
 <!--
