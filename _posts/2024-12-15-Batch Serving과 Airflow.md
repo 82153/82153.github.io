@@ -36,7 +36,7 @@ tags: [Airflow]
 
 ## Airflow Architecture
 
-![image](public/img/스크린샷 2024-12-15 222543.png)
+![image](/public/img/스크린샷 2024-12-15 222543.png)
 
 - **Scheduler**
     - 각종 메타 정보의 기록을 담당한다.
