@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "[Cloud]Cloud Service"
 date: 2024-12-16 20:01 +0900
 tags: [Cloud]
