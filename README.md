@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-- Github: <a href="[URL](https://github.com/82153/)" target="_blank">github</a>
+- Github: <a href="(https://github.com/82153">github</a>
 - Email: kdw6177@naver.com, kdw6177012@gmail.com
 <!--
 ## Theme Monos
@@ -34,3 +34,4 @@ date_format: "%Y-%M-%D" //and date format.
 ![alt text](/public/img/screenshot-m1.png)
 #### Page - Articles
 ![alt text](/public/img/screenshot-m2.png)
+-->
