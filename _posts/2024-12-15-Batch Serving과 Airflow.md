@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "[Airflow]Batch Serving과 Airflow"
 date: 2024-12-15 10:37 +0900
 tags: [Airflow]
