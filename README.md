@@ -6,7 +6,7 @@ permalink: /about/
 
 - Github: <a href="https://github.com/82153">github</a>
 - Email: kdw6177@naver.com
-- 
+  
 <!--
 ## Theme Monos
 > Simple and lightweight theme for Jekyll
