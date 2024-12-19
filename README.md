@@ -4,8 +4,7 @@ title: About
 permalink: /about/
 ---
 
-- Github: ![Github](https://www.google.com](https://github.com/82153/)
-
+- Github: <a href="[URL](https://github.com/82153/)" target="_blank">github</a>
 - Email: kdw6177@naver.com, kdw6177012@gmail.com
 <!--
 ## Theme Monos
