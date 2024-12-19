@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "[구름 Level] Knight's Move"
 date: 2024-7-28 11:12 +0900
 tags: [Conding Test]
