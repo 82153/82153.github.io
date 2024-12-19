@@ -2,7 +2,7 @@
 layout: post
 title: "[구름 Level] Knight's Move"
 date: 2024-7-28 11:12 +0900
-category: 코딩 테스트
+category: Coding Test
 tags: [Conding Test]
 ---
 [문제](https://level.goorm.io/exam/43063/knight-s-move/quiz/1)
