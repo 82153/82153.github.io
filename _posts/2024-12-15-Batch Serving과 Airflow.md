@@ -35,8 +35,7 @@ tags: [Airflow]
         - LoacalExecutor, CeleryExecutor 등 다양한 Executor가 존재
 
 ## Airflow Architecture
-
-![image](/public/img/스크린샷 2024-12-15 222543.png)
+![스크린샷 2024-12-15 222543](https://github.com/user-attachments/assets/69846565-02ee-444c-b011-203c20993c10)
 
 - **Scheduler**
     - 각종 메타 정보의 기록을 담당한다.
