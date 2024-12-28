@@ -29,27 +29,27 @@ sidebar:
     - **Transparency**: 모델 내부 구조/파라미터 열람 가능 여부에 따른 분류이다. 즉 접근 권한이 어느 정도인지를 나타낸다.
         - **White-box**: Teacher의 **내부 구조, 파라미터** 등을 알 수 있는 경우이다.
         
-        <img class="image image--md" src="C:\Users\kdw61\OneDrive\사진\스크린샷\스크린샷 2024-12-27 103129.png"/>
+        ![스크린샷 2024-12-27 103129](https://github.com/user-attachments/assets/b8398baa-f0b3-4454-a39a-fa4efcb4b988)
         
         - **Gray-box**: Teacher의 **output 및 최종 Logit / 제한된 정보**를 알 수 있는 경우이다.
         
-        <img class="image image--md" src="C:\Users\kdw61\OneDrive\사진\스크린샷\스크린샷 2024-12-27 103115.png"/>
+        ![스크린샷 2024-12-27 103115](https://github.com/user-attachments/assets/9dd055c6-368e-43e9-9d6f-b18c786c3661)
 
         - **Black-box**: Teacher의 **output만** 알 수 있는 경우이다.
         
-        <img class="image image--md" src="C:\Users\kdw61\OneDrive\사진\스크린샷\스크린샷 2024-12-27 103100.png"/>
+        ![스크린샷 2024-12-27 103100](https://github.com/user-attachments/assets/720895b2-3546-419b-b430-08309da2eb04)
         
 
 ## Logit-based KD
 
 - Class 간의 유사도 정보가 간접적으로 있기에 Logit으로 계산된 **class 확률값**을 지식 증류에 사용하는 기법이다.
     
-    <img class="image image--md" src="C:\Users\kdw61\OneDrive\사진\스크린샷\스크린샷 2024-12-27 110147.png"/>
+    ![스크린샷 2024-12-27 110147](https://github.com/user-attachments/assets/5f2ecf13-03d6-4cb1-8fab-0ed0afe49e17)
     
 - Student 모델의 학습은 Teacher모델의 확률 분포와 Student 모델의 확률 분포가 비슷해지게 학습을 진행한다. 이때, KL-Divergence로 비교하고 이것을 Loss로 사용한다.
 - 정리해보면, Teacher 모델은 **Hard Label(정답 Class만)**으로 학습하고, Student 모델은 **Soft Label(Class별 확률)과 Hard Label**로 학습한다.
     
-    <img class="image image--md" src="C:\Users\kdw61\OneDrive\사진\스크린샷\스크린샷 2024-12-27 123427.png"/>
+    ![스크린샷 2024-12-27 123427](https://github.com/user-attachments/assets/1b2a8d83-aec5-4040-9a93-2a02e8fa51a1)
     
 - Class 확률 값을 구할 때, $\tau$로 나눠 주는데, **$\tau$가 1보다 크면 확률 분포가 완만**해지고, **$\tau$가 1보다 작으면 확률 분포가 날카로워** 진다.
 - 확률 분포를 완만하게 하는 것이 Class간의 유사도를 더 잘 파악할 수 있고, 또한 Label Smoothing 같은 효과를 내어 모델의 Robustness를 높여 일반화 성능을 높일 수 있다.
@@ -59,13 +59,13 @@ sidebar:
 - 내부 접근이 모두 가능할 때, 활용 가능한 기법으로 Teacher 모델의 Layer의 Feature를 지식으로 사용하는 기법이다.
 - 즉 Layer의 크기가 다르더라도 중간에 나온 Feature의 결과는 비슷해지도록 하는 것이다.
 
-<img class="image image--md" src="C:\Users\kdw61\OneDrive\사진\스크린샷\스크린샷 2024-12-27 123450.png"/>
+![스크린샷 2024-12-27 123450](https://github.com/user-attachments/assets/481189cf-8476-4012-b9b2-b7c08d9398ab)
 
 - Feature-based KD는 중간 Feature를 학습하는 것으로 중간 Feature에 대해서 MSE Loss를 사용한다. 또한 기본적으로 Cross-Entropy loss도 분류기에서 사용한다.
 - MSE Loss를 계산 시에 주의할 점으로는 각 모델의 차원의 크기이다. Student 모델과 Teacher 모델은 차원이 다를 수 있기에 이에 따라 맞춰주는 작업이 필요하다.
 - 이것을 맞춰주는 것이 regressor layer(R)로 smooth하게 차원을 맞춰준다. 이 regressor layer 또한 학습하는 것이다. 이를 수식으로 보면 아래와 같다.
 
-<img class="image image--md" src="C:\Users\kdw61\OneDrive\사진\스크린샷\스크린샷 2024-12-27 124220.png"/>
+![스크린샷 2024-12-27 124220](https://github.com/user-attachments/assets/4be2b86e-00e1-4a67-b54d-2e51e0398306)
 
 - 그렇다면 어떤 Layer에서 Feature를 추출해야 할까?
     - 일반적으로는 **중간 Layer**에서 추출한 Feature map을 사용한다.
