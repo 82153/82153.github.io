@@ -22,7 +22,7 @@ sidebar:
     - 당연하게 우선 **양자화 방식**과 **Quantized Value**를 저장해야 한다. 이뿐만 아니라 우리는 **Scale factor(s)**와 **Zero-point(z)**를 저장해야 한다. 이 값들을 통해 우리는 양자화된 값을 얻을 수도 있고, 역양자화를 통해 복원할 수 있다.
     - Scale factor는 기울기 값이고, Zero-Point는 양자화 후의 0의 위치이다.
         
-        <img class="image image--md" src="C:\Users\kdw61\OneDrive\사진\스크린샷\스크린샷 2024-12-28 141056.png"/>
+        ![스크린샷 2024-12-28 141056](https://github.com/user-attachments/assets/568305df-57d0-4382-9705-112168926c19)
         
     - s와 z를 구한 뒤, 위의 수식을 통해서 Quantization을 할 수도, 원본으로 복원할 수도 있다.
 - Quantization 기법에는 대표적으로 2가지 방법이 있는데 **Absmax Quantization**과 **Zero-point Quantization**이 있다.
