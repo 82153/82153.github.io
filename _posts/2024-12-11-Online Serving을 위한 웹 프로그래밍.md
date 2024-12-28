@@ -4,6 +4,8 @@ title: "[FastAPI] Background For FastAPI"
 date: 2024-12-12 11:12 +0900
 category: Product_Serving
 tags: [FastAPI]
+aside:
+  toc: true
 ---
 ## Online Serving
 
