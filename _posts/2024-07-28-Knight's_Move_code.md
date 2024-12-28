@@ -5,7 +5,7 @@ date: 2024-7-28 11:12 +0900
 category: Coding_Test
 tags: [Conding Test]
 sidebar:
-  nav: layouts
+  nav: cote
 ---
 [문제](https://level.goorm.io/exam/43063/knight-s-move/quiz/1)
 ```python

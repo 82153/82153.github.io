@@ -52,13 +52,57 @@ header:
     url: /about.html
 
 lightweighting:
-  - title: "lightweighting_optimization"
+  - title: "lightweighting_optimization_Introduction"
     children:
       - title: "모델 경량화 및 최적화 소개"
         url: /lightweighting_optimization/2024/12/26/%EB%AA%A8%EB%8D%B8-%EA%B2%BD%EB%9F%89%ED%99%94-%EB%B0%8F-%EC%B5%9C%EC%A0%81%ED%99%94-%EC%86%8C%EA%B0%9C.html
+  - title: "lightweighting"
+    children:
       - title: "[Lightweighting] Pruning"
         url: /lightweighting_optimization/2024/12/26/Pruning.html
       - title: "[Lightweighting] Knowledge Distillation"
         url: /lightweighting_optimization/2024/12/27/Knowledge-Distillation.html
       - title: "[Lightweighting] Quantization"
         url: /lightweighting_optimization/2024/12/28/Quantization.html
+
+Serving:
+  - title: "Airflow"
+    children:
+      - title: "[Airflow]Batch Serving과 Airflow"
+        url: /product_serving/2024/12/15/Batch-Serving%EA%B3%BC-Airflow.html
+      - title: "[Airflow]Airflow 실습"
+        url: /product_serving/2024/12/19/Airflow실습.html
+  - title: "FastAPI"
+    children:
+      - title: "[FastAPI] Background For FastAPI"
+        url: /product_serving/2024/12/12/Online-Serving을-위한-웹-프로그래밍.html
+      - title: "[FastAPI] 기본 사용법"
+        url: /product_serving/2024/12/12/FastAPI-기본.html
+  - title: "MLflow"
+    children:
+      - title: "[MLflow]MLflow를 이용한 모델 관리 및 모델 평가"
+        url: /product_serving/2024/12/17/모델-관리와-모델-평가.html
+  - title: "Cloud"
+    children:
+      - title: "[Cloud]Cloud Service"
+        url: /product_serving/2024/12/16/Cloud_Service.html
+
+cote:
+  - title: "Coding Test"
+    children:
+      - title: "[구름 Level] Knight's Move"
+        url: /coding_test/2024/07/28/Knight's_Move_code.html
+      - title: "[구름 Level] 환경과 쥐 크기의 상관관계"
+        url: /coding_test/2024/07/29/환경과_쥐_크기의_상관관계.html
+      - title: "[프로그래머스] 귤 고르기"
+        url: /coding_test/2024/07/29/프로그래머스_귤-고르기.html
+      - title: "[프로그래머스] 2개 이하로 다른 비트"
+        url: /coding_test/2024/12/21/2개-이하로-다른-비트.html
+      - title: "[프로그래머스] 두 큐 합 같게 만들기"
+        url: /coding_test/2024/12/22/두-큐-합-같게-만들기.html
+      - title: "[프로그래머스] 삼각 달팽이"
+        url: /coding_test/2024/12/23/삼각-달팽이.html
+      - title: "[프로그래머스] 큰 수 만들기"
+        url: /coding_test/2024/12/26/큰-수-만들기.html
+      - title: "[프로그래머스] 연속된 부분 수열의 합"
+        url: /coding_test/2024/12/26/연속된-부분-수열의-합.html
