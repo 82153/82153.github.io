@@ -66,7 +66,7 @@ lightweighting:
         url: /lightweighting_optimization/2024/12/28/Quantization.html
   -title: "PEFT"
     children:
-      - title: [PEFT] Basic PEFT
+      - title: "[PEFT] Basic PEFT"
         url: /lightweighting_optimization/2024/12/28/PEFT.html
 
 Serving:
