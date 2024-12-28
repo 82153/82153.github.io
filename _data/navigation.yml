@@ -23,7 +23,7 @@ header:
       fr-LU   : *FR
       tr      : &TR       Arşivdekiler
       # @end locale config
-    url: /category.html
+    url: /archive.html
 
   - titles:
       # @start locale config
