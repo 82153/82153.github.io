@@ -39,7 +39,7 @@ sidebar:
         - LoacalExecutor, CeleryExecutor 등 다양한 Executor가 존재
 
 ## Airflow Architecture
-![스크린샷 2024-12-15 222543](https://github.com/user-attachments/assets/69846565-02ee-444c-b011-203c20993c10)
+<img class="image image--md" src="C:\Users\kdw61\OneDrive\사진\스크린샷\스크린샷 2024-12-15 222543.png"/>
 
 - **Scheduler**
     - 각종 메타 정보의 기록을 담당한다.

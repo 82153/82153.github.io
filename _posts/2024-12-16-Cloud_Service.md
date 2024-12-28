@@ -44,7 +44,7 @@ sidebar:
     - MLOps 관련 서비스를 제공해준다.
 - **Cloud 벤더 별 공통 기술 이름**
 
-![스크린샷 2024-12-16 110559](https://github.com/user-attachments/assets/1e6a9599-9a2e-4850-9e66-982aaf9ebc59)
+<img class="image image--md" src="C:\Users\kdw61\OneDrive\사진\스크린샷\스크린샷 2024-12-16 110559.png"/>
 
 ## Virtual Private Cloud(VPC)
 
@@ -56,7 +56,7 @@ sidebar:
     - 경로를 설정하고 찾아가게 해준다.
 - 예시
     
-    ![스크린샷 2024-12-16 111404](https://github.com/user-attachments/assets/9f9c1117-ea97-4def-b014-45000f24cc12)
+    <img class="image image--md" src="C:\Users\kdw61\OneDrive\사진\스크린샷\스크린샷 2024-12-16 111404.png"/>
     
     - VPC를 하나의 아파트 단지라고 보자.
     - 그럼 경비원, 편의점, 아파트, 표지판 등이 있을건데, 편의점은 아파트 단지 안으로만 들어가면 누구나 들어갈 수 있다. 하지만 아파트 안으로는 아무나 들어갈 수 없다.
