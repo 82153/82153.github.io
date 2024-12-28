@@ -7,7 +7,7 @@ tags: [Lightweighting & Optimization]
 aside:
   toc: true
 sidebar:
-  nav: layouts
+  nav: lightweighting
 ---
 ## Knowledge Distillation(지식 증류)
 

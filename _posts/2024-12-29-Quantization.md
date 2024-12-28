@@ -7,7 +7,7 @@ tags: [Lightweighting & Optimization]
 aside:
   toc: true
 sidebar:
-  nav: layouts
+  nav: lightweighting
 ---
 ## Quantization(양자화)
 
