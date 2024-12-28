@@ -1,9 +1,13 @@
 ---
-layout: post
+layout: article
 title: "Knowledge Distillation"
 date: 2024-12-27 13:25 +0900
 category: Lightweighting_Optimization
 tags: [Lightweighting_Optimization, Knowledge Distillation]
+aside:
+  toc: true
+sidebar:
+  nav: layouts
 ---
 ## Knowledge Distillation(지식 증류)
 

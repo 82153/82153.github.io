@@ -1,9 +1,11 @@
 ---
-layout: post
+layout: article
 title: "[구름 Level] Knight's Move"
 date: 2024-7-28 11:12 +0900
 category: Coding_Test
 tags: [Conding Test]
+sidebar:
+  nav: layouts
 ---
 [문제](https://level.goorm.io/exam/43063/knight-s-move/quiz/1)
 ```python

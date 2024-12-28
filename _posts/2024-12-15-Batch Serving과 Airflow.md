@@ -1,9 +1,13 @@
 ---
-layout: post
+layout: article
 title: "[Airflow]Batch Serving과 Airflow"
 date: 2024-12-15 10:37 +0900
 category: Product_Serving
 tags: [Airflow]
+aside:
+  toc: true
+sidebar:
+  nav: layouts
 ---
 ## Batch Serving
 
