@@ -64,7 +64,7 @@ lightweighting:
         url: /lightweighting_optimization/2024/12/27/Knowledge-Distillation.html
       - title: "[Lightweighting] Quantization"
         url: /lightweighting_optimization/2024/12/28/Quantization.html
-  -title: "PEFT"
+  - title: "PEFT"
     children:
       - title: "[PEFT] Basic PEFT"
         url: /lightweighting_optimization/2024/12/28/PEFT.html
