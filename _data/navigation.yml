@@ -52,7 +52,7 @@ header:
     url: /about.html
 
 lightweighting:
-  - title: "lightweighting_optimization_Introduction"
+  - title: "lightweighting_optimization_Intro"
     children:
       - title: "모델 경량화 및 최적화 소개"
         url: /lightweighting_optimization/2024/12/26/%EB%AA%A8%EB%8D%B8-%EA%B2%BD%EB%9F%89%ED%99%94-%EB%B0%8F-%EC%B5%9C%EC%A0%81%ED%99%94-%EC%86%8C%EA%B0%9C.html
