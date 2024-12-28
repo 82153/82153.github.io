@@ -1,9 +1,9 @@
 ---
 layout: article
-title: "Knowledge Distillation"
+title: "[Lightweighting]Knowledge Distillation"
 date: 2024-12-27 13:25 +0900
 category: Lightweighting_Optimization
-tags: [Lightweighting & Optimization, Knowledge Distillation]
+tags: [Lightweighting & Optimization]
 aside:
   toc: true
 sidebar:

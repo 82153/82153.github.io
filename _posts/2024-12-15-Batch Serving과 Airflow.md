@@ -3,7 +3,7 @@ layout: article
 title: "[Airflow]Batch Serving과 Airflow"
 date: 2024-12-15 10:37 +0900
 category: Product_Serving
-tags: [Product Serving, Airflow]
+tags: [Product Serving]
 aside:
   toc: true
 sidebar:

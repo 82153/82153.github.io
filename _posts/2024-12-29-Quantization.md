@@ -1,9 +1,9 @@
 ---
 layout: article
-title: "Quantization"
+title: "[Lightweighting]Quantization"
 date: 2024-12-28 16:01 +0900
 category: Lightweighting_Optimization
-tags: [Lightweighting & Optimization, Quantization]
+tags: [Lightweighting & Optimization]
 aside:
   toc: true
 sidebar:
