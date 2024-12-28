@@ -27,7 +27,7 @@ sidebar:
     - s와 z를 구한 뒤, 위의 수식을 통해서 Quantization을 할 수도, 원본으로 복원할 수도 있다.
 - Quantization 기법에는 대표적으로 2가지 방법이 있는데 **Absmax Quantization**과 **Zero-point Quantization**이 있다.
 - **Absmax Quantization**
-    - Absmax Quantization는 ****0을 기준으로, 변환 후 **값들의 범위가 좌우 대칭**이 되도록 변환하는 기법으로 Tanh처럼 **대칭적인 분포를 가지고,** **0을 항상 0으로 보내는 것**이 효과적인 경우에 활용한다.
+    - Absmax Quantization는 **0을 기준으로, 변환 후 값들의 범위가 좌우 대칭**이 되도록 변환하는 기법으로 Tanh처럼 **대칭적인 분포를 가지고,** **0을 항상 0으로 보내는 것**이 효과적인 경우에 활용한다.
     - 이 기법은 우선 데이터에서 절댓값의 최댓값을 내가 변환하려는 자료형의 최댓값으로 매핑하고 그 값의 음수를 최솟값으로 매핑하여 그 것에 맞게 다른 값들을  Quantization한다.
     - 여기에서 s = $\frac{\max(\vert X \vert))}{\text{변환하려는 자료형의 최댓값}}$, z = 0 이 된다.(추가적으로 z는 0이기에 따로 저장 안해도 된다.)
 - **Zero-Point Quantization**
