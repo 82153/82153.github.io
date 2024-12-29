@@ -20,7 +20,7 @@ sidebar:
 - 높은 Precision 데이터를 낮은 Precision으로  대응시키는 Quantization 계산식을 말한다.
 - 양자화를 거친 후에 우리는 어떤 값들을 저장하고 있어야 할까?
     - 당연하게 우선 **양자화 방식**과 **Quantized Value**를 저장해야 한다. 이뿐만 아니라 우리는 **Scale factor(s)**와 **Zero-point(z)**를 저장해야 한다. 이 값들을 통해 우리는 양자화된 값을 얻을 수도 있고, 역양자화를 통해 복원할 수 있다.
-    - Scale factor는 기울기 값이고, Zero-Point는 양자화 후의 0의 위치이다.
+    - Scale factor는 기울기 값이고, Zero-Point는 양자화 후의 0의 위치이다. 이 값들은 중요한 값들이기에 높은 Precision으로 저장한다.
         
         ![스크린샷 2024-12-28 141056](https://github.com/user-attachments/assets/568305df-57d0-4382-9705-112168926c19)
         
