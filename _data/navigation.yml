@@ -73,7 +73,7 @@ lightweighting:
   - title: "Distributed Training"
     children:
       - title: "[Distributed Training] Data Parallelism"
-        url: //lightweighting_optimization/2024/12/29/Distributed-Training.html
+        url: /lightweighting_optimization/2024/12/29/Distributed-Training.html
 
 Serving:
   - title: "Airflow"
