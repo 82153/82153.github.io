@@ -70,6 +70,10 @@ lightweighting:
         url: /lightweighting_optimization/2024/12/28/PEFT.html
       - title: "[PEFT] Advanced PEFT"
         url: /lightweighting_optimization/2024/12/29/Advanced-PEFT.html
+  - title: "Distributed Trainig"
+    children:
+      - title: "[Distributed Training] Data Parallelism"
+        url: /lightweighting_optimization/2024/12/30/dataparallel.html
 
 Serving:
   - title: "Airflow"
