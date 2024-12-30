@@ -25,16 +25,16 @@ sidebar:
 
 - 텐서 연산을 나누어 수행하더라도 똑같은 값을 얻을 수 있다는 개념에서 시작한 것으로 **텐서 연산을 여러 차원의 슬라이스로 나눈 후 GPU들에 할당하여 처리하는 기법**이다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6acf52cb-2c5c-462e-bf26-b7011fa2da60/7eecffaa-7314-4269-a0a9-6cd7a8dd60b4/image.png)
+![스크린샷 2024-12-30 154907](https://github.com/user-attachments/assets/9bffcbad-52fc-4ffe-b7df-099f4624a87d)
 
 - 텐서를 나누는 방식에도 세로로 나누는 **Column-wise** 방식과 가로로 나누는 **Row-wise** 방식이 있다.
 - 여기에서 Row-wise 방식으로 한다면, 행렬 곱의 조건이 맞지 않아 계산이 안 되는데 어떻게 처리할까?
     - 앞의 행렬(input)을 Column-wise한 방식처럼 세로로 나눠준다.
 - Row-Wise와 Column-Wise 방식을 예시로 보면 아래와 같다.
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6acf52cb-2c5c-462e-bf26-b7011fa2da60/4550a948-83d4-4f92-8ffc-366a0ef19486/image.png)
+    ![스크린샷 2024-12-30 160332](https://github.com/user-attachments/assets/7dba5975-2e58-4e98-89e6-a229c0ecff4d)
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6acf52cb-2c5c-462e-bf26-b7011fa2da60/6e1697ec-51ad-453e-b30d-9de412e18e2f/image.png)
+    ![스크린샷 2024-12-30 160349](https://github.com/user-attachments/assets/6b5055dd-9613-4018-bffd-ca26d0066e6d)
     
 - Row-Wise에서는 X 또한 나누어 주는 것을 확인할 수 있고, 각각의 다른 GPU에서 계산하여 그것을 더해주는 작업을 한다. 여기에서는 합산 시에 AllReduce 연산을 통해 출력값을 동일하게 해준 뒤 Backward를 진행한다.
 - Column-Wise에서는 나누어서 계산한 것들을 Column-wise하게 concat해주는 것을 알 수 있다. 또한 Backward 시에 AllReduce연산을 통해 열 단위의 Gradient를 모든 GPU에 동일하게 공유한다.
@@ -43,7 +43,7 @@ sidebar:
 
 - **모델을 층 단위로 GPU에 분할**하여 순차적으로 넣어 주는 기법으로 계산 효율성을 높이고 메모리 사용량을 분산 할 수 있다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6acf52cb-2c5c-462e-bf26-b7011fa2da60/c4c43d9e-e5cd-4db1-9282-f27e26ba6d37/image.png)
+![스크린샷 2024-12-30 163642](https://github.com/user-attachments/assets/3d4e6c7c-385d-4db1-9b06-fbc6a28f23c6)
 
 - 하지만 층 간의 연산량 차이가 클 경우 Latency가 길어질 수 있다.
 - 좀 더 자세히 설명하면 각 층은 서로 독립적인 것이 아니라 이전 층의 결과에 의존한다. 이렇기에 **이전 층의 결과가 나와야지만 다음 층의 계산을 할 수 있다**.
@@ -52,12 +52,12 @@ sidebar:
 - 이 방법에도 Backward를 언제 처리하는 지에 따라 2가지로 나뉜다.
     - **Synchronous Pipeline**
         
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6acf52cb-2c5c-462e-bf26-b7011fa2da60/09e08ff2-ba77-4dd3-a3c1-e21f33e9c538/image.png)
+        ![스크린샷 2024-12-30 163714](https://github.com/user-attachments/assets/cacb7539-c299-45b8-9c2b-3760b31120ea)
         
         - Forward 연산을 마치기 전까지 Backward 연산을 실행하지 않고, 모든 Backward를 마치면 한번에 모델을 업데이트 한다.
     - **Asynchronous Pipeline**
         
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6acf52cb-2c5c-462e-bf26-b7011fa2da60/3f189324-1049-471f-89a4-3c4de38fb8cd/image.png)
+        ![스크린샷 2024-12-30 163738](https://github.com/user-attachments/assets/95af3d71-32f1-4b50-a75d-f98981929cef)
         
         - 하나의 Micro Batch의  Foward 연산과 Backward연산을 번갈아가면서 수행하는 방식으로, 위 방식보다 조금 더 유휴 시간을 줄일 수 있지만 구현이 어렵다.
         - 또한 파라미터를 모든 GPU가 공유하지 않기에 통신 비용이 발생하지 않는다.
