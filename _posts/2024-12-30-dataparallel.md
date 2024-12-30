@@ -41,3 +41,10 @@ sidebar:
     - AllReduce Operation은 **여러 디바이스에 흩어져 있는 데이터를 서로 동시에 주고받기 위한** Collective Operation 중 하나로 **여러 디바이스의 데이터를 모두 모아 하나의 값으로 줄인 후 그 결과를 디바이스에 전송하는 방식**이다.
     - 우선 모델을 각각의 GPU에 복제하고 Foward과정을 거친다. 이후 따로 취합 없이 독립적으로 Logit값을 계산하여 Loss를 구하고 각각 Gradient를 구한다.
     - 이후 각 GPU의 Gradient값을 AllReduce Operation을 통해 평균 Gradient를 구하고, 이 평균 Gradient를 기반으로 모든 GPU를 업데이트 한다.
+|  | DP | DDP |
+| --- | --- | --- |
+| **Gradient 동기화** | 마스터 GPU가 모두 모아 평균내어 모델을 업데이트 | AllReduce 연산을 사용하여 모든 GPU가 동시에 업데이트 |
+| **모델 복제** | 마스터 GPU의 모델을 매 iter마다 복제 | 모든 GPU가 Initailization 단계에서 한 번만 복제 |
+| **통신 오버헤드** | 마스터 GPU가 리소스가 몰려 통신 비용이 매우 높음 | 마스터 GPU가 없어 통신 비용 낮음 |
+| **장점** | 구현이 쉬움 | 효율적인 통신으로 학습 속도 증가 |
+| **단점** | 병목 현상 가능 | 구현이 복잡 |
