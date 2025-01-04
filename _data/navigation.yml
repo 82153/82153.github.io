@@ -118,6 +118,10 @@ cote:
         url: /coding_test/2024/12/26/큰-수-만들기.html
       - title: "[프로그래머스] 연속된 부분 수열의 합"
         url: /coding_test/2024/12/26/연속된-부분-수열의-합.html
+      - title: "[프로그래머스] 롤케이크 자르기"
+        url: /coding_test/2024/12/31/롤케이크-자르기.html
+      - title: "[프로그래머스] 시소 짝궁"
+        url: /coding_test/2025/01/03/시소-짝궁.html
 
 paper_review:
   - title: "3D"
