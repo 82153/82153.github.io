@@ -118,3 +118,9 @@ cote:
         url: /coding_test/2024/12/26/큰-수-만들기.html
       - title: "[프로그래머스] 연속된 부분 수열의 합"
         url: /coding_test/2024/12/26/연속된-부분-수열의-합.html
+
+paper_review:
+  - title: "3D"
+    children:
+      - title: "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis"
+        url: /paper_review/2025/01/02/NeRF.html
