@@ -128,3 +128,7 @@ paper_review:
     children:
       - title: "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis"
         url: /paper_review/2025/01/02/NeRF.html
+  - title: "Audio"
+    children:
+      - title: "Qwen-Audio: Advancing Universal Audio Understanding via Unified Large-Scale Audio-Language Models"
+        url: /paper_review/2025/01/13/Qwen-Audio.html
