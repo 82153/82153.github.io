@@ -83,6 +83,7 @@ sidebar:
 | Text Language Tag | 출력으로 나올 Text의 언어를 나타내는 Tag |
 | Timestamps Tag | 모델이 timestamp를 예측할 필요가 있는지 나타내는 Tag |
 | Output Instruction | 세부 Task 및 출력 형식을 나타내는 Tag |
+
 - Whisper에서는 문장 단위의 timestamp를 사용했지만, Qwen-audio는 단어 단위의 timestamp를 지정→SRWT(Speech Recognition with Word level Timestamp) token이 transcription 되기 전에 start time 예측, transcription 후에 end time 예측
 
 ![스크린샷 2025-01-14 141236](https://github.com/user-attachments/assets/d0d84c5f-33d4-4d3b-847e-89377d4b3488)
