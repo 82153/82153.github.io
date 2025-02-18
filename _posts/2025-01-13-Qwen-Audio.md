@@ -33,18 +33,18 @@ sidebar:
 
 ## Methodology
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6acf52cb-2c5c-462e-bf26-b7011fa2da60/9954d5bb-94b3-48b3-9329-f98f6df9752b/image.png)
+![스크린샷 2025-01-13 232315](https://github.com/user-attachments/assets/37e28e89-6e98-491c-9964-509c00333c7f)
 
 ### Model Architecture
 
 - 모델의 구조는 **Audio-Encoder**와 **LLM**으로 구성된다.
 - 이 모델은 **audio sequence($a$)**와 **text sequence($x$)**가 주어졌을 때, **다음 text token을 예측**하는 것이다. 여기서 text sequence는 현재 시점 이전의 모든 $x$를 기반으로 한다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6acf52cb-2c5c-462e-bf26-b7011fa2da60/48f7bab0-cd53-434e-89b5-9ab395321226/image.png)
+![스크린샷 2025-01-13 232419](https://github.com/user-attachments/assets/898a7b41-d7ea-45eb-8f81-645deb3c5c81)
 
 - 여기서 $\phi$는 Encoder의 파라미터, $\theta$는 LLM의 파라미터로 둘 다 학습 가능하다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6acf52cb-2c5c-462e-bf26-b7011fa2da60/58c292ec-cc3e-4d00-8f1c-c2d2cec93517/image.png)
+![스크린샷 2025-01-14 001608](https://github.com/user-attachments/assets/69a72fdd-4600-4ca1-b573-b4be12a43bf0)
 
 - **Audio-Encoder**
     - Whisper-large-v2를 사용함
@@ -73,7 +73,7 @@ sidebar:
 - 기존에는 데이터 셋을 섞어서 co-training을 하거나, 비슷한 task끼리 묶기, 데이터 셋 ID를 지정하는 방법을 사용했지만 더 개선할 필요가 있음
 - 그래서 Whisper에서 사용한 것처럼 Decoder에 input token sequence에 tag와 조건을 추가하는 방식을 사용함(Whisper는 단순히 speech translation과 인지 task만 가능했음)
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6acf52cb-2c5c-462e-bf26-b7011fa2da60/d4cd3c72-9907-459b-bdc2-f50f5e7755e6/image.png)
+![스크린샷 2025-01-14 004443](https://github.com/user-attachments/assets/a6fc0ba8-7520-4fd9-b5a3-5677385dab82)
 
 | Tag | Description |
 | --- | --- |
@@ -85,7 +85,7 @@ sidebar:
 | Output Instruction | 세부 Task 및 출력 형식을 나타내는 Tag |
 - Whisper에서는 문장 단위의 timestamp를 사용했지만, Qwen-audio는 단어 단위의 timestamp를 지정→SRWT(Speech Recognition with Word level Timestamp) token이 transcription 되기 전에 start time 예측, transcription 후에 end time 예측
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6acf52cb-2c5c-462e-bf26-b7011fa2da60/baebc315-a9dc-40ce-bc5f-42744a117b29/image.png)
+![스크린샷 2025-01-14 141236](https://github.com/user-attachments/assets/d0d84c5f-33d4-4d3b-847e-89377d4b3488)
 
 - SRWT는 모델의 audio 신호와 timestamp를 정렬하는 능력을 향상 시킴. 이로 인해 speech 신호를 종합적으로 이해하는데 기여했고, speech 인식과 QA같은 많은 task에서 눈에 띄는 발전을 함
 - 결론적으로 이런 Framework를 사용함으로써, **공유된 tag를 통해 비슷한 task들 사이의 지식의 공유를 최대화**하고, 모델의 one-to-many 문제를 피하기 위해 **서로 다른 task와 output 형식을 구별할** 수 있게 되었다.
@@ -107,7 +107,7 @@ sidebar:
 - Qwen-audio 학습 시에는 LLM을 Freeze하고, Audio-Encoder만 학습
 - Qwen-audio-chat 학습 시에는 Audio-Encoder를 Freeze하고, LLM만 학습
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6acf52cb-2c5c-462e-bf26-b7011fa2da60/51467def-7330-49d2-a8ea-a577476dec33/image.png)
+![스크린샷 2025-01-14 142431](https://github.com/user-attachments/assets/bb01c2b6-3562-4578-b74e-2a83b641fa6a)
 
 ---
 
