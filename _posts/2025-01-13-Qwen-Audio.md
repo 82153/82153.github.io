@@ -75,10 +75,10 @@ sidebar:
 
 ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6acf52cb-2c5c-462e-bf26-b7011fa2da60/d4cd3c72-9907-459b-bdc2-f50f5e7755e6/image.png)
 
-| Tag |  |
+| Tag | Description |
 | --- | --- |
 | Transcription Tag | Prediction의 시작을 나타내는 Tag (Transcription이 필요한 task인지 아닌지 나타냄) |
-| Audio Language Tag | Audio에서 나오는 언어를 나타내는 Tag                                             8개에 포함 안된 언어나 음악이나 자연의 소리는 UNKNOWN |
+| Audio Language Tag | Audio에서 나오는 언어를 나타내는 Tag, 8개에 포함 안된 언어나 음악이나 자연의 소리는 UNKNOWN |
 | Task Tag | 수행할 구체적인 Task를 나타내는 Tag |
 | Text Language Tag | 출력으로 나올 Text의 언어를 나타내는 Tag |
 | Timestamps Tag | 모델이 timestamp를 예측할 필요가 있는지 나타내는 Tag |
