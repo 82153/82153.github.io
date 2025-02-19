@@ -11,7 +11,7 @@ sidebar:
 ---
 ## Abstract
 
-![image.png](attachment:8fe1606b-5083-4d67-aac1-42d195232eef:image.png)
+![스크린샷 2025-02-19 203402](https://github.com/user-attachments/assets/8d054fd9-6147-4dc7-a662-4b9baee62635)
 
 - 최근 수십억개의 image-text쌍으로 학습된 text-to-image 합성을 위한 Diffusion모델이 발전해왔다. 이것을 3D에도 적용하고자 했지만, **라벨링된 대규모의 3D 데이터셋과 효율적인 모델 구조가 없었다**.
 - 해당 연구에서는 이런 한계를 극복하기 위해 사전 훈련된 2D Text-to-Image Diffusion 모델을 사용하여 Text-3D 합성을 수행하고자 한다.
@@ -65,11 +65,11 @@ sidebar:
 - diffusion training loss로 생성된 데이터포인트 $x = g(\theta)$에 대해 최소화하면 $\theta^*={arg min}_{\theta} L{_{Diff}}(\phi, x = g(\theta))$가 된다.
 - 하지만 실제로, 우리는 이 손실 함수가 $x = \theta$인 항등 DIP를 사용할 때조차도 현실감 있는 샘플을 생성하지 않음을 발견했고, 다른 연구에서는 이 방법이 신중하게 timestep 스케쥴러를 만들 수 있다는 것을 보였지만 해당 연구에서는 objective를 다루기 힘들고, timestep 스케쥴도 다루기 어렵다는 것을 찾았다. → U-Net Jacobian term이 연산량이 많기 때문에
 
-![image.png](attachment:b86d322e-8a46-4a8c-901e-8602090862ff:image.png)
+![스크린샷 2025-02-18 184915](https://github.com/user-attachments/assets/52d5d95c-4748-4ed8-a7d7-8725644815e6)
 
 - 직관적으로 이 loss는 t에 따라 x를 랜덤한 양의 noise로 손상시키며, 높은 밀도 영역으로 이동하기 위해 diffusion model의 score fuction을 따르는 업데이트된 방향을 추정한다. Diffusion model을 사용하여 DIP를 학습하기 위한 이 기울기는 diffusion model의 학습된 score fuction을 사용하는 가중 probability density distillation loss의 기울기임을 보여준다.
 
-![image.png](attachment:0c971a7b-5e11-40ce-b78e-e5773277f99e:image.png)
+![스크린샷 2025-02-18 184956](https://github.com/user-attachments/assets/233bdeed-3c58-4f7f-8b90-17020a6d11a8)
 
 - 이러한 샘플링 접근 방법을 Score Distillation Sampling(SDS)라고 한다.
 - SDS는 distillation과 연관있지만, density대신에 score함수를 사용한다.
@@ -78,13 +78,13 @@ sidebar:
 - $L_{SDS}$의 mode 탐색 특성을 감안할 때 이 loss를 최소화하면 좋은 샘플이 생성되는지 여부가 불분명할 수 있다. 저자들은 경험적으로 classifier-free guidance의 guidance 가중치 ω를 큰 값으로 설정하면 품질이 향상된다는 것을 발견했다.
 - SDS는 ancestral sampling에 필적하는 디테일을 생성하지만 파라미터 공간에서 작동하기 때문에 새로운 전이 학습 (transfer learning) 애플리케이션이 가능하다.
 
-![image.png](attachment:98e3d657-4bd7-4095-bd1b-a15a2596506a:image.png)
+![스크린샷 2025-02-18 190203](https://github.com/user-attachments/assets/757ca39e-2f97-4997-b926-4f41085d4348)
 
 ---
 
 ## DreamFusion Algorithm
 
-![image.png](attachment:0e14d572-45f8-4762-821d-370ef1fa5b1b:image.png)
+![스크린샷 2025-02-19 161618](https://github.com/user-attachments/assets/083635f8-23a0-4c6e-b8e8-af11e27880f3)
 
 - 해당 부분에서는 text로부터 3D asset을 생성해 내는 특별한 알고리즘에 대해서 설명할 것이다.
 - Diffusion Model은 64x64를 생성하는 base **Imagen 모델**(Super resolution 제외)을 수정 없이 사용했다.
@@ -98,17 +98,17 @@ sidebar:
 - 기존의 NeRF같은 모델은 ray의 방향에 따른 빛을 방출하는 반면 DreamFusion의 **MLP는  우리가 조절하는 조명에 따라 표면의 색을 parameterize 한다.** 이 과정을 **shading**이라 한다.
 - 이 MLP를 통해 우리는 밀도($\tau$)와 albedo($\rho$)를 구할 수 있다.
 
-![image.png](attachment:e87b1d46-8b2e-4177-8377-d4df3f9ebd87:image.png)
+![스크린샷 2025-02-19 174148](https://github.com/user-attachments/assets/be7181f9-a587-4fa5-a2c9-3510ae027d2d)
 
 - 이전의 NeRF-like 모델들은 여러 reflectance(반사) 모델을 활용했는데, 본 연구에서는 각 점에 대해 **RGB albedo *ρ*(material의 색상)**를 활용한다.
 - 3D 포인트의 최종 shaded color를 계산하기 위해서는 albedo($\rho$), normal vector(n), 3D 좌표($\mu$), 빛의 위치($l$), 색상($l_{p}$),  주변 색상($l_{a}$)을 통해 구한다.
 
-![image.png](attachment:bd549008-2a75-4e85-a42e-9152774095a5:image.png)
+![스크린샷 2025-02-19 173706](https://github.com/user-attachments/assets/65db9400-53a1-4553-9318-ed8c3f203b3f)
 
 - $n = -\nabla_{\mu}\tau / ||\nabla_{\mu}\tau||$로 구한다.(밀도의 negative gradient를 정규화 한 것)
 - 위와 같이 계산된 색상과 밀도를 사용하여 표준 NeRF에서 사용되는 렌더링 가중치 $w_{i}$로 볼륨 렌더링 적분을 근사화한다. Text-to-3D 생성에 대한 이전 연구들에서는 albedo($\rho$)를 흰색 (1, 1, 1)으로 대체하여 "**텍스쳐가 없는**" shaded 출력을 생성한다.
 
-![image.png](attachment:75849268-d891-4014-87aa-d640b59f94fb:image.png)
+![스크린샷 2025-02-19 175323](https://github.com/user-attachments/assets/69ea379c-dbc0-471f-958b-72c170fc9fd0)
 
 - 이렇게 하면 **모델이 텍스트 조건을 충족하기 위해 평면 geometry에 scene 콘텐츠를 그리는 저하된 solution을 생성하는 것을 방지**할 수 있다.
 - DreamFusion은 몇몇 복잡한 장면을 생성할 수 있지만, 해당 연구에서 **고정된 bounding sphere에서 NeRF 표현을 쿼리하는 것**과 위치 관련 인코딩 ray 방향 사용하여 background color 계산하는 두번째 MLP에서 생성된 **environment map을 사용하는 것**이 도움이 되는 것을 발견했다.
@@ -122,8 +122,8 @@ sidebar:
     1. 카메라와 조명을 랜덤하게 샘플링
         - $\phi$(고도각) = [-10, 90], $\theta$(방위각) = [0, 360], $r$(거리) = [1, 1.5] 사이에서 랜덤하게 샘플링한다.
         
-        ![image.png](attachment:e5cebee5-55b1-472b-9b85-e465116c3d67:image.png)
-        
+        ![스크린샷 2025-02-19 202014](https://github.com/user-attachments/assets/95b99217-585e-4f69-8291-e512c40d4710)
+
         - 샘플링한 점의 위치와 원점 주변의 look-at point와 up vector를 샘플링하여 결합하여 **camera pose matrix**를 만든다.
         - Focal length는 w(=width=64) 에 0.7~1.35로 균등하게 나눈 상수 λ값을 곱해서 사용했고, Light의 위치는 카메라 위치를 중심으로 한 확률 분포로부터 샘플링했다.
         - 여기에서 **다양한 카메라 위치를 사용하는 것이 일관된 3D scene을 합성**하는 데 중요하며 **카메라 거리는 학습된 scene의 해상도를 개선**하는 데 도움이 된다는 것을 발견했다.
