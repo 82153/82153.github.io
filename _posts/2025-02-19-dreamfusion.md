@@ -60,7 +60,7 @@ sidebar:
 - 우리가 관심을 가지는 것은 **랜덤한 각도에서 rendering할 때, 좋은 이미지처럼 보이는 3D모델을 만드는 것이 목표**이다.
 - 이러한 모델을 미분 가능한 generator $g$가 이미지 $x=g(\theta)$를 생성하기 위한 파라미터 $\theta$를 반환하는 **differentiable image parameter(DIP)**로 세분화 될 수 있다. 3D를 기준으로 봤을 때, **$\theta$는 3D Volume, g는 volumetric render**로 볼 수 있다. 이 파라미터($\theta$)를 학습하기 위해 우리는 diffusion 모델에 적용할 수 있는 loss function이 필요하다.
 - 해당 논문의 접근 방식은  $x = g(\theta)$가 frozen diffusion model로부터 sampling된 것처럼 보이는 방향으로 최적화를 통해, tractable한 샘플링을 가능하게 한다.
-- 이 최적화를 위해 필요한 loss : 그럴듯한 것은 loss가 작고, 그럴듯 하지 않은 것은 loss가 큰 것(= 학습된 조건부 밀도$p(x|y)$의 mode를 찾는 loss)
+- 이 최적화를 위해 필요한 loss : 그럴듯한 것은 loss가 작고, 그럴듯 하지 않은 것은 loss가 큰 것(= 학습된 조건부 밀도$p(x\|y)$의 mode를 찾는 loss)
 - 첫 번째로 Diffusion의 loss를 사용하였을 때, 고차원의 생성 모델의 mode가 일반적이지 않을 때, diffusion 모델 학습의 단계적인(multiscale) 성질이 이 병리를 피하는데 도움을 줄 수 있다.
 - diffusion training loss로 생성된 데이터포인트 $x = g(\theta)$에 대해 최소화하면 $\theta^*={arg min}_{\theta} L{_{Diff}}(\phi, x = g(\theta))$가 된다.
 - 하지만 실제로, 우리는 이 손실 함수가 $x = \theta$인 항등 DIP를 사용할 때조차도 현실감 있는 샘플을 생성하지 않음을 발견했고, 다른 연구에서는 이 방법이 신중하게 timestep 스케쥴러를 만들 수 있다는 것을 보였지만 해당 연구에서는 objective를 다루기 힘들고, timestep 스케쥴도 다루기 어렵다는 것을 찾았다. → U-Net Jacobian term이 연산량이 많기 때문에
