@@ -132,6 +132,8 @@ paper_review:
     children:
       - title: "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis"
         url: /paper_review/2025/01/02/NeRF.html
+      - title: "DreamFusion: Text-To-3D Using 2D Diffusion"
+        url: /paper_review/2025/02/19/dreamfusion.html
   - title: "Audio"
     children:
       - title: "Qwen-Audio: Advancing Universal Audio Understanding via Unified Large-Scale Audio-Language Models"
