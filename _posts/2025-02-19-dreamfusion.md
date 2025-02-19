@@ -52,7 +52,7 @@ sidebar:
     - 모델이 데이터 분포를 학습한 후, 노이즈에서 데이터를 복원하는 과정
     - 샘플링을 통해 점진적으로 노이즈를 제거함
     - **Reverse** 과정은 최적의 MSE 기반 노이즈 예측기를 학습하는 방식으로 이루어짐
-    - $p_{\theta}(z_{t-1}|z_{t}) = q(z_{t}|z_{t}, x=x_{\theta}(z_{t};t))$
+    - $p_{\theta}(z_{t-1}\|z_{t}) = q(z_{t}\|z_{t}, x=x_{\theta}(z_{t};t))$
 
 ### How can we sample in parameter space, no pixel space?
 
@@ -105,7 +105,7 @@ sidebar:
 
 ![스크린샷 2025-02-19 173706](https://github.com/user-attachments/assets/65db9400-53a1-4553-9318-ed8c3f203b3f)
 
-- $n = -\nabla_{\mu}\tau / |\nabla_{\mu}\tau|$로 구한다.(밀도의 negative gradient를 정규화 한 것)
+- $n = -\nabla_{\mu}\tau / \|\nabla_{\mu}\tau\|$로 구한다.(밀도의 negative gradient를 정규화 한 것)
 - 위와 같이 계산된 색상과 밀도를 사용하여 표준 NeRF에서 사용되는 렌더링 가중치 $w_{i}$로 볼륨 렌더링 적분을 근사화한다. Text-to-3D 생성에 대한 이전 연구들에서는 albedo($\rho$)를 흰색 (1, 1, 1)으로 대체하여 "**텍스쳐가 없는**" shaded 출력을 생성한다.
 
 ![스크린샷 2025-02-19 175323](https://github.com/user-attachments/assets/69ea379c-dbc0-471f-958b-72c170fc9fd0)
