@@ -33,7 +33,7 @@ sidebar:
     - Dream Field의 경우에는 CLIP의 image-text joint embedding을 사용하고, NeRF를 학습하기 위해 optimization-based 접근 방식을 채택하여 2D image-text 모델이 3D 합성에도 활용될 수 있음을 보였다.
 - DreamFusion의 경우, Dream Field와 유사하지만 CLIP 대신에 2D Diffusion 모델의 distillation으로부터 나온 loss를 사용한다.
 - 이 loss는 probability density distillation을 기반으로 하고, diffusion의 forward process를 기반으로 하여 **shared mean을 가진 가우시안 분포와 사전 학습된 diffusion 모델로 학습된 score function의 KL-Divergence를 최소화**하는 방향으로 학습한다.
-- 결과적으로 **Score Distillation Sampling(SDS)**는 ****미분 가능한 이미지 파라미터화에서 최적화를 통한 샘플링이 가능하고 NeRF 변형과 결합하여 DreamFusion은 다양한 사용자가 제공한 text-prompt에 대해 high-fidelity로 일관된 3D객체와 장면을 생성한다.
+- 결과적으로 **Score Distillation Sampling(SDS)**는 미분 가능한 이미지 파라미터화에서 최적화를 통한 샘플링이 가능하고 NeRF 변형과 결합하여 DreamFusion은 다양한 사용자가 제공한 text-prompt에 대해 high-fidelity로 일관된 3D객체와 장면을 생성한다.
 
 ---
 
@@ -62,7 +62,7 @@ sidebar:
 - 해당 논문의 접근 방식은  $x = g(\theta)$가 frozen diffusion model로부터 sampling된 것처럼 보이는 방향으로 최적화를 통해, tractable한 샘플링을 가능하게 한다.
 - 이 최적화를 위해 필요한 loss : 그럴듯한 것은 loss가 작고, 그럴듯 하지 않은 것은 loss가 큰 것(= 학습된 조건부 밀도$p(x\|y)$의 mode를 찾는 loss)
 - 첫 번째로 Diffusion의 loss를 사용하였을 때, 고차원의 생성 모델의 mode가 일반적이지 않을 때, diffusion 모델 학습의 단계적인(multiscale) 성질이 이 병리를 피하는데 도움을 줄 수 있다.
-- diffusion training loss로 생성된 데이터포인트 $x = g(\theta)$에 대해 최소화하면 $\theta^*={arg min}_{\theta} L{_{Diff}}(\phi, x = g(\theta))$가 된다.
+- diffusion training loss로 생성된 데이터포인트 $x = g(\theta)$에 대해 최소화하면 $\theta^{*}={arg min}_{\theta} L{_{Diff}}(\phi, x = g(\theta))$가 된다.
 - 하지만 실제로, 우리는 이 손실 함수가 $x = \theta$인 항등 DIP를 사용할 때조차도 현실감 있는 샘플을 생성하지 않음을 발견했고, 다른 연구에서는 이 방법이 신중하게 timestep 스케쥴러를 만들 수 있다는 것을 보였지만 해당 연구에서는 objective를 다루기 힘들고, timestep 스케쥴도 다루기 어렵다는 것을 찾았다. → U-Net Jacobian term이 연산량이 많기 때문에
 
 ![스크린샷 2025-02-18 184915](https://github.com/user-attachments/assets/52d5d95c-4748-4ed8-a7d7-8725644815e6)
