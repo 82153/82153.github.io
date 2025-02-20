@@ -128,6 +128,8 @@ cote:
         url: /coding_test/2025/02/19/호텔-대실.html
       - title: "[프로그래머스] 숫자 카드 나누기"
         url: /coding_test/2025/02/20/숫자-카드-나누기.html
+      - title: "[프로그래머스] 정수 삼각형"
+        url: /coding_test/2025/02/20/정수-삼각형.html
 
 paper_review:
   - title: "3D"
