@@ -150,3 +150,7 @@ paper_review:
     children:
       - title: "Qwen-Audio: Advancing Universal Audio Understanding via Unified Large-Scale Audio-Language Models"
         url: /paper_review/2025/01/13/Qwen-Audio.html
+  - title: "Generative"
+    children:
+      - title: "High-Resolution Image Synthesis with Latent Diffusion Models"
+        url: /paper_review/2025/01/13/stable-diffusion.html
