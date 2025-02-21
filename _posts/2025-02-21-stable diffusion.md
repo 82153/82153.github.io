@@ -37,8 +37,8 @@ sidebar:
 - 해당 연구에서 접근법은 우선 pixel 공간에서 사전 학습된 Diffusion 모델을 분석하는 거에서 시작한다.
 - 위에서 언급했듯이 Diffusion 모델은 likelihood-based모델이고, 이 모델의 학습 단계는 크게 2가지로 구분된다.
     
-    ![image.png](attachment:91aa6deb-98e8-4b69-9bab-152698fffd79:image.png)
-    
+    ![스크린샷 2025-02-20 171844](https://github.com/user-attachments/assets/fd171c1c-9610-4022-b913-e78d0f884c3c)
+
     1. high-frequency detail를 없애지만, 약간의 semantic variation을 학습하는 **perceptual compression 단계**
     2. 실제 generative model이 데이터의 semantic과 conceptual composition를 학습하는 **semantic compression 단계**
 - 따라서 본 논문은 고해상도 이미지 합성을 위해 **인지적으로(perceptually) 동등하지만, 계산적으로 더 안정적인 space를 찾는 것을 목표**로 한다. 이를 위해 해당 연구에서는 학습 시에 독립적은 두 단계를 거친다.
@@ -60,7 +60,7 @@ sidebar:
 
 ## Method
 
-![image.png](attachment:c1fa0191-1d86-4e6f-9c04-b43089df799b:image.png)
+![스크린샷 2025-02-21 160128](https://github.com/user-attachments/assets/3d121632-e309-4688-a9a4-3bef03636949)
 
 - Diffusion모델에서 high-resolution 합성에서 연산 요구량을 줄이기 위해 해당 loss term을 undersampling하여 인지적으로 부적절한 detail은 무시하였지만, 여전히 pixel 공간에서 evaluation을 진행했기에 연산 비용이 많았다.
 - **생성 학습 단계에서 압축하는 단계를 명시적으로 분리**하여 위의 단점을 해결하고자 했다. 이를 통해 **연산량은 많이 감소시키, 인지적으로 데이터 공간과 동일한 공간(=latent 공간)에서 학습하는 auto-encoding모델**을 사용하여 아래와 같은 이점을 얻었다.
@@ -78,8 +78,8 @@ sidebar:
 
 - Diffusion 모델은 length가 T인 고정된  마르코프 체인의 역 과정으로 normal분포에서 점진적으로 noise를 제거해나가면서 데이터 분포 $p(x)$를 학습하는 확률 모델이다. 이런 모델은 input으로 부터 noise가 제거된 variant를 예측하면서 학습한다.
     
-    ![image.png](attachment:00c62b79-4227-40f6-adc8-9abf43d7c446:image.png)
-    
+    ![스크린샷 2025-02-21 174230](https://github.com/user-attachments/assets/d54c8556-33ad-4a49-8a2b-ed3271ee7c47)
+
 - $E$(Encoder)와 $D$(Decoder)로 구성되어 학습된 perceptual compression model을 통해  high-frequency, imperceptible details가 추상화 되는 latent space에 접근할 수 있다.
 - 고차원 pixel 공간과 비교했을 때, latent 공간은 **중요하고 semantic한 데이터의 부분에 집중**할 수 있고, **저차원에서 학습하기에 연산적으로 더 효율적인 공간**이기에 likelihood-based모델에 더 적합한 공간이다.
 - LDM에서 neural backbone $\epsilon_{\theta}$는 time-conditional U-Net으로 구현했다. 또한 forward 과정이 고정되었기에 학습동안 encoder에서 $z_{t}$를 효율적으로 얻을 수 있고, $p(z)$로부터 샘플을 하나의 Decoder를 통과하여 image 공간으로 decode할 수 있다.
@@ -90,7 +90,7 @@ sidebar:
 - 해당 연구에서는 Diffusion모델을 보다 유연한 조건부 이미지 generator로 바꾸기 위해 **U-Net backbone에 cross-attention 메커니즘을 추가**하여 다양한 modality에 대해 효율적으로 학습할 수 있게 하였다.
 - 다양한 modality에서 y를 전처리하기 위해 우리는 도메인 특정 인코더 $\tau_\theta$를 도입하여 y를 중간 표현 $\tau_\theta (y) \in \mathbb{R}^{M \times d_\tau}$로 매핑한 후, cross-attention레이어를 통해 U-Net의 중간 레이어에 매핑한다.
 
-![image.png](attachment:ab8012c7-8154-4434-a793-dbba4d180d84:image.png)
+    ![스크린샷 2025-02-21 173127](https://github.com/user-attachments/assets/06dc8330-d559-465f-8145-959088d490f8)
 
 ---
 
