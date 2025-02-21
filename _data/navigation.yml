@@ -130,6 +130,8 @@ cote:
         url: /coding_test/2025/02/20/숫자-카드-나누기.html
       - title: "[프로그래머스] 정수 삼각형"
         url: /coding_test/2025/02/20/정수-삼각형.html
+      - title: "[프로그래머스] 올바른 괄호"
+        url: /coding_test/2025/02/21/올바른-괄호.html
 
 paper_review:
   - title: "3D"
