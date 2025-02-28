@@ -156,4 +156,6 @@ paper_review:
         url: /paper_review/2025/02/21/stable-diffusion.html
 NLP:
   - title: "NLP"
-    url: /nlp/2025/02/28/Tokenization.html
+    children:
+      - title: "Tokenization"
+        url: /nlp/2025/02/28/Tokenization.html
