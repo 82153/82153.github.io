@@ -159,3 +159,5 @@ NLP:
     children:
       - title: "Tokenization"
         url: /nlp/2025/02/28/Tokenization.html
+      - title: "Word Embedding"
+        url: /nlp/2025/02/28/Word-Embedding.html
