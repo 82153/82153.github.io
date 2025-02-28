@@ -33,7 +33,7 @@ sidebar:
 
 - 단어가 주어졌을 때, 앞 뒤로 몇 개의 단어를 예측할지 Window-size라는 변수를 통하여 설정한다.
 
-![image.png](attachment:5f36120b-b475-41eb-9909-64e5588bf680:image.png)
+![스크린샷 2025-02-28 175011](https://github.com/user-attachments/assets/28bdd6b4-2b9e-491c-8158-d21d673c0a0d)
 
 - Word2Vec에서는 vocabulary를 만들고, 문장 내에 각 단어에 대해서 One-Hot Embedding을 진행한다. 이후 각 단어에 대해서 2개의 layer를 거친 후, Softmax를 거쳐, 주변에 올 단어의 확률 분포를 구한다.
 - 이때 각 layer 사이에 비선형 함수를 적용하지 않는다. 이를 바탕으로 행렬 연산을 분석해보면, input word 벡터는 one-hot 벡터로 1로 지정된 Dimension과 동일한 $W_{1}$의 index의 column이 결과로 나올 것이고, 이후 $W_2$와 행렬 곱 연산을 진행한다.
