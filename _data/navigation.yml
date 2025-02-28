@@ -154,3 +154,6 @@ paper_review:
     children:
       - title: "High-Resolution Image Synthesis with Latent Diffusion Models"
         url: /paper_review/2025/02/21/stable-diffusion.html
+NLP:
+  - title: "NLP"
+    url: /nlp/2025/02/28/Tokenization.html
