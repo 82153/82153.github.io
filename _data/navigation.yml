@@ -161,3 +161,5 @@ NLP:
         url: /nlp/2025/02/28/Tokenization.html
       - title: "Word Embedding"
         url: /nlp/2025/02/28/Word-Embedding.html
+      - title: "RNN과 Language Model"
+        url: /nlp/2025/02/28/rnn.html
