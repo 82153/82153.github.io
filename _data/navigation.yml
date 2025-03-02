@@ -165,3 +165,5 @@ NLP:
         url: /nlp/2025/03/01/rnn.html
       - title: "Exploding and Vanishing Gradient of RNN"
         url: /nlp/2025/03/01/rnn-problem.html
+      - title: "LSTM과 GRU"
+        url: /nlp/2025/03/02/lstm-and-gru.html
