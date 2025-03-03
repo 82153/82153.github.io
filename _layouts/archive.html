@@ -33,7 +33,8 @@ titles:
     {%- assign grouped_posts = grouped_posts | sort: "name" -%}
 
     {%- for group in grouped_posts -%}
-      <h2>{{ group.name }}</h2> <!-- YYYY-MM (연-월) 헤더 추가 -->
+      <h2>{{ group.name }}</h2>
+      {%- assign sorted_items = group.items | sort: "date" -%}
       {%- include article-list.html articles=group.items type='brief' show_info=true reverse=false -%}
     {%- endfor -%}
   </div>
