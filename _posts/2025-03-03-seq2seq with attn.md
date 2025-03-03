@@ -11,7 +11,7 @@ sidebar:
 ---
 ## Seq2Seq Model의 문제점
 
-![image.png](attachment:4175e5bd-6599-4142-8f18-8ea553734b33:image.png)
+![스크린샷 2025-03-03 131525](https://github.com/user-attachments/assets/48ebf9ec-5fc5-44e2-9ecc-579bae27a928)
 
 - Seq2Seq 모델은 many-to-many를 다룰 수 있는 기본 구조의 모델로서, 일련의 **단어를 Encoder가 입력으로 받아 고정된 크기의 Latent Vector(=마지막 time step의 $h_t$)로 변환**하고 **이를 Decoder의 $h_0$로 할당하고 SOS토큰을 입력으로 주어 단어를 순차적으로 예측**한다.
 - 이런 모델은 **가변적인 길이를 가진 input과 output을 다룰 수 있게 된다.**
@@ -25,7 +25,7 @@ sidebar:
 - Attention은 Encoder의 모든 time step의 $h_t$에 대하여, Decoder의 각 time step마다 필요한 정보(Encoder의 $h_t$)를 선택하여 사용하는 방식이다.
 - 이를 통해, Decoder는 Encoder의 마지막 $h_t$에만 의존하지 않고 **Encoder 상의 모든 $h_t$를 활용하여 Decoding 과정에서 필요한 정보를 선택하여 사용**하는 것이다.
 
-![image.png](attachment:61595e6f-a4ea-48a3-ade7-d466f5aa8c08:image.png)
+![스크린샷 2025-03-03 133635](https://github.com/user-attachments/assets/30def080-26a7-48f7-b42b-3043adc44837)
 
 - Attention의 과정을 살펴보면, 우선 **Decoder의 현재 time step의 $h_t$와 Encoder의 각 time step의 $h$간의 내적이나 concat 후에 MLP를 거치는 등의 방법을 통하여 Attention Score(유사도)**를 구한다.
 - 이렇게 얻어진 **Attention Score에 Softmax를 적용**하여 유사도의 확률 분포를 얻고, 이 값들을 **각 Encoder의 $h$의 가중치로 사용하여 가중 평균을 얻어 최종 Attention 출력**을 생성한다.
