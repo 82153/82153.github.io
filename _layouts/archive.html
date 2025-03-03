@@ -26,32 +26,13 @@ titles:
   # @end locale config
 ---
 
-<!-- <div class="layout--archive js-all">
-  {%- include tags.html -%}
-  <div class="js-result layout--archive__result d-none">
-    {%- assign grouped_posts = site.posts | group_by_exp: "post", "post.date | date: '%Y-%m'" -%}
-    {%- assign grouped_posts = grouped_posts | sort: "name" -%}
-
-    {%- for group in grouped_posts -%}
-      <h2>{{ group.name }}</h2>
-      {%- assign sorted_items = group.items | sort: "date" -%}
-      {%- include article-list.html articles=sorted_items type='brief' show_info=true reverse=false -%}
-    {%- endfor -%}
-  </div>
-</div> -->
 <div class="layout--archive js-all">
   {%- include tags.html -%}
   <div class="js-result layout--archive__result d-none">
-    {%- assign grouped_posts = site.posts | where_exp: "post", "post.tags contains selected_tag" | group_by_exp: "post", "post.date | date: '%Y-%m'" -%}
-    {%- assign grouped_posts = grouped_posts | sort: "name" -%}
-
-    {%- for group in grouped_posts -%}
-      <h2>{{ group.name }}</h2>
-      {%- assign sorted_items = group.items | sort: "date" -%}
-      {%- include article-list.html articles=sorted_items type='brief' show_info=true reverse=false -%}
-    {%- endfor -%}
+    {%- include article-list.html articles=site.posts type='brief' show_info=true reverse=false group_by='year' -%}
   </div>
 </div>
+
 <script>
   {%- include scripts/archieve.js -%}
 </script>
