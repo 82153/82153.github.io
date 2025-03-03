@@ -35,7 +35,7 @@ titles:
     {%- for group in grouped_posts -%}
       <h2>{{ group.name }}</h2>
       {%- assign sorted_items = group.items | sort: "date" -%}
-      {%- include article-list.html articles=group.items type='brief' show_info=true reverse=false -%}
+      {%- include article-list.html articles=sorted_items type='brief' show_info=true reverse=false -%}
     {%- endfor -%}
   </div>
 </div>
