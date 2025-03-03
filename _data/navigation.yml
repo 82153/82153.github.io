@@ -173,3 +173,5 @@ NLP:
         url: /nlp/2025/03/01/rnn-problem.html
       - title: "LSTM과 GRU"
         url: /nlp/2025/03/02/lstm-and-gru.html
+      - title: "Seq2Seq with Attention"
+        url: /nlp/2025/03/03/seq2seq-with-attn.html
