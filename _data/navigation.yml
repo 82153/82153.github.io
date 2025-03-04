@@ -144,6 +144,8 @@ cote:
         url: /coding_test/2025/03/02/재귀의-귀재.html
       - title: "[백준] 재귀함수가 뭔가요?"
         url: /coding_test/2025/03/02/재귀함수가-뭔가요.html
+      - title: "[백준] f(A+B)"
+        url: /coding_test/2025/03/04/f(a+b).html
 
 paper_review:
   - title: "3D"
