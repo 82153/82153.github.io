@@ -154,6 +154,8 @@ cote:
         url: /coding_test/2025/03/08/막대기.html
       - title: "[백준] 단어 정렬"
         url: /coding_test/2025/03/08/단어-정렬.html
+      - title: "[백준] 단어 나누기"
+        url: /coding_test/2025/03/11/단어-나누기.html
 
 paper_review:
   - title: "3D"
