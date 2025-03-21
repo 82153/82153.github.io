@@ -158,8 +158,10 @@ cote:
         url: /coding_test/2025/03/11/단어-나누기.html
       - title: "[백준] 별 찍기-19"
         url: /coding_test/2025/03/15/별-찍기19.html
-      - title: "[백준] 평범한 배낭낭"
+      - title: "[백준] 평범한 배낭"
         url: /coding_test/2025/03/16/평범한-배낭.html
+      - title: "[백준] 평범한 배낭낭"
+        url: /coding_test/2025/03/21/하노이의-탑.html
 
 paper_review:
   - title: "3D"
