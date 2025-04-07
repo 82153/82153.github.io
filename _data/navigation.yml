@@ -134,6 +134,34 @@ cote:
         url: /coding_test/2025/02/20/정수-삼각형.html
       - title: "[프로그래머스] 올바른 괄호"
         url: /coding_test/2025/02/21/올바른-괄호.html
+      - title: "[프로그래머스] 피로도"
+        url: /coding_test/2025/03/25/피로도.html
+      - title: "[프로그래머스] 방문 길이"
+        url: /coding_test/2025/03/26/방문-기록.html
+      - title: "[프로그래머스] 타겟 넘버"
+        url: /coding_test/2025/03/27/타겟-넘버.html
+      - title: "[프로그래머스] 다리를 지나는 트럭"
+        url: /coding_test/2025/03/28/다리를-지나는-트럭.html
+      - title: "[프로그래머스] 모음사전"
+        url: /coding_test/2025/03/29/모음사전.html
+      - title: "[프로그래머스] 게임 맵 최단거리"
+        url: /coding_test/2025/03/30/게임-맵-최단거리.html
+      - title: "[프로그래머스] 주식가격"
+        url: /coding_test/2025/03/31/주식가격.html
+      - title: "[프로그래머스] 더 맵게"
+        url: /coding_test/2025/04/01/더-맵게.html
+      - title: "[프로그래머스] 스킬트리"
+        url: /coding_test/2025/04/02/스킬트리.html
+      - title: "[프로그래머스] 주차 요금 계산"
+        url: /coding_test/2025/04/03/주차-요금-계산.html
+      - title: "[프로그래머스] 의상"
+        url: /coding_test/2025/04/04/의상.html
+      - title: "[프로그래머스] 뉴스 클러스터링"
+        url: /coding_test/2025/04/05/뉴스-클러스터링.html
+      - title: "[프로그래머스] 오픈채팅방"
+        url: /coding_test/2025/04/06/오픈채팅방.html
+      - title: "[프로그래머스] 파일명 정렬"
+        url: /coding_test/2025/04/06/파일명-정렬.html
   - title: "백준"
     children:
       - title: "[백준] 부녀회장이 될테야"
