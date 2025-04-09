@@ -206,6 +206,10 @@ cote:
         url: /coding_test/2025/03/24/풍선-터뜨리기.html
       - title: "[백준] 행운의 바퀴"
         url: /coding_test/2025/04/08/행운의-바퀴.html
+  - title: "자료구조 실습"
+    children:
+      - title: "[자료구조 실습] 다항식 더하기"
+        url: /coding_test/2025/04/09/다항식-더하기.html
 
 paper_review:
   - title: "3D"
