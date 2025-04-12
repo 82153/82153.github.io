@@ -212,6 +212,8 @@ cote:
         url: /coding_test/2025/04/11/별찍기-10.html
       - title: "[백준] 트리 순회"
         url: /coding_test/2025/04/11/트리 순회.html
+      - title: "[백준] 색종이 만들기"
+        url: /coding_test/2025/04/12/색종이 만들기.html
   - title: "자료구조 실습"
     children:
       - title: "[자료구조 실습] 다항식 더하기"
