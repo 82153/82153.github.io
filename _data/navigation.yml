@@ -256,4 +256,4 @@ dl_basic:
   - title: "DL Basic"
     children:
       - title: "가중치 초기화"
-        url: /dl-basic/2025/04/14/가중치-초기화.md
+        url: /dl%20basic/2025/04/12/가중치-초기화.html
