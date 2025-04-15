@@ -257,3 +257,5 @@ dl_basic:
     children:
       - title: "가중치 초기화"
         url: /dl%20basic/2025/04/14/가중치-초기화.html
+      - title: "정규화(Regularization)"
+        url: /dl%20basic/2025/04/14/정규화.html
