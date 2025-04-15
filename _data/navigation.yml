@@ -251,3 +251,9 @@ NLP:
         url: /nlp/2025/03/03/seq2seq-with-attn.html
       - title: "Transformer"
         url: /nlp/2025/03/04/transformer.html
+
+dl_basic:
+  - title: "DL Basic"
+    children:
+      - title: "가중치 초기화"
+        url: /dl-basic/2025/04/14/가중치-초기화.md
