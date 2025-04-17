@@ -214,10 +214,6 @@ cote:
         url: /coding_test/2025/04/11/트리-순회.html
       - title: "[백준] 색종이 만들기"
         url: /coding_test/2025/04/12/색종이-만들기.html
-  - title: "자료구조 실습"
-    children:
-      - title: "[자료구조 실습] 다항식 더하기"
-        url: /coding_test/2025/04/09/다항식-더하기.html
 
 paper_review:
   - title: "3D"
@@ -259,3 +255,9 @@ dl_basic:
         url: /dl%20basic/2025/04/14/가중치-초기화.html
       - title: "정규화(Regularization)"
         url: /dl%20basic/2025/04/14/정규화.html
+
+data_struct:
+  - title: "자료구조"
+    children:
+      - title: "[자료구조] 재귀(Recursion)"
+        url: /coding_test/2025/04/09/재귀.html
