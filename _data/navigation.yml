@@ -261,3 +261,5 @@ data_struct:
     children:
       - title: "[자료구조] 재귀(Recursion)"
         url: /자료%20구조/2025/04/09/재귀.html
+      - title: "[자료구조] 배열(array)"
+        url: /자료%20구조/2025/04/11/배열.html
