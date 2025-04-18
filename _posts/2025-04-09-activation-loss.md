@@ -71,13 +71,13 @@ sidebar:
 
 - 바이너리 크로스 엔트로피는 **이진 분류**에서 사용하고, **레이블이 0과 1**로만 나온다.
     
-    ![스크린샷 2025-04-18 232714](https://github.com/user-attachments/assets/05607a04-d054-40a2-b8c5-39b235aa7043)
+    ![스크린샷 2025-04-18 232944](https://github.com/user-attachments/assets/fa6fbca8-27ed-458e-a5f9-83d11ca3ab80)
 
 
 ### 크로스 엔트로피(CrossEntropy)
 
 - 크로스 엔트로피는 **분류 문제**에서 사용되고, **One-Hot Encoding**을 했을 때, 사용할 수 있다.
-    
-    ![스크린샷 2025-04-18 232944](https://github.com/user-attachments/assets/fa6fbca8-27ed-458e-a5f9-83d11ca3ab80)
+- 
+    ![스크린샷 2025-04-18 232714](https://github.com/user-attachments/assets/05607a04-d054-40a2-b8c5-39b235aa7043)
 
 - 이진 분류때처럼 1, 2, 3, .. 등으로 나타내지 않는 이유는 Class간에 관계가 생기기 때문이다. 즉, **오차가 Class마다 다르게 된다.**
