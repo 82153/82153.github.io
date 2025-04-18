@@ -16,37 +16,37 @@ sidebar:
 
 - 가중 합의 결과를 [0 ~ 1] 사이에서 비선형 형태로 바꿔준다.
     
-    ![image.png](attachment:ec086b9a-2913-45b1-90b5-f650bd517974:image.png)
-    
+    ![스크린샷 2025-04-18 214059](https://github.com/user-attachments/assets/a7cfe82b-6afd-4961-8a1c-05896181e7fa)
+
 - 주로 로지스틱 회귀 같은 분류 문제에서 주로 사용했다.
 - 하지만 모델의 깊이가 깊어지며 발생하는 **기울기 소멸 문제가 발생**하여 잘 사용하지 않는다. Sigmoid의 미분 값을 보면 값들이 [0 ~ 0.25] 사이이다. 이는 역전파 시에 기울기가 계속 줄어든다는 의미이고, 계속 곱해지다보면 기울기가 소멸하게 된다.
 - 또한 함수의 값이 모두 양수(Non-zero centered)로 학습 시에 **모든 파라미터가 동일한 방향으로 학습하게 되어 불안정한 학습**을 하게 된다.
     
-    ![image.png](attachment:94c14800-7844-4f24-aec7-e5b6f0eefb9e:image.png)
-    
+    ![스크린샷 2025-04-18 220458](https://github.com/user-attachments/assets/b6e73b42-faa5-4690-a368-1de021bf6c6b)
+
 
 ### **하이퍼볼릭 탄젠트 = Tanh**
 
 - 하이퍼볼릭 탄젠트는 가중 합의 결과를 [-1 ~ 1]사이에서 비선형 형태로 변형해준다.
     
-    ![image.png](attachment:fbffd4a2-37cb-45e3-9371-a39c65cab59f:image.png)
-    
+    ![스크린샷 2025-04-18 220658](https://github.com/user-attachments/assets/0e030d08-396e-42cc-a833-97f7cf151fa7)
+
 - **Sigmoid에서 양수만 나오는 문제를 해결**하였다. 하지만 여전히 기울기가 [0 ~ 1]사이로 딥러닝이 깊어지며 발생하는 **기울기 소멸 문제가 발생**한다.
 
 ### **ReLU = max(0, x)**
 
 - 최근 가장 활발하게 사용되는 활성화 함수이다. input이 음수이면 0을 출력하고, 양수이면 x를 출력한다. 이는 경사하강법에 영향을 주지 않아 **학습 속도가 빠르고, 기울기 소멸 문제가 발생하지 않는다.**
     
-    ![image.png](attachment:65262df3-42a6-4805-a331-308ac57b22fb:image.png)
-    
+    ![스크린샷 2025-04-18 221730](https://github.com/user-attachments/assets/b9c39a4b-fe2d-4c0e-b9de-0647604e86ef)
+
 - 하지만 음수는 항상 0으로 처리하기에 학습 능력이 떨어질 수 있다.
 
 ### **Leaky ReLU = x if x > 0 else $\alpha$x**
 
 - ReLU에서 음수를 항상 0을 출력하는 문제를 해결하기 위해 **음수 부분에 매우 작은 기울기**를 주는 방법이다.
     
-    ![image.png](attachment:a594d60e-72c6-43d9-8a2d-53698d3f3dae:image.png)
-    
+    ![스크린샷 2025-04-18 222113](https://github.com/user-attachments/assets/8dfd6c50-8918-4782-9538-85a0644f81a0)
+
 
 ### Softmax = $\frac {exp(a)}{\sum_{i=1}^{n}{exp(a)}}$(n = 출력층의 개수)
 
@@ -63,21 +63,21 @@ sidebar:
 
 - **실제 값과 예측 값의 차이를 제곱하여 평균** 낸 것이다. 주로 **회귀에서 사용**된다.
     
-    ![image.png](attachment:eb7d0a2b-b491-43d1-a529-16c2222175b2:image.png)
-    
+    ![스크린샷 2025-04-18 231130](https://github.com/user-attachments/assets/f46aa4f8-a7ae-4593-9dc1-4df913927d56)
+
 - 만약 제곱을 하지 않는다면, 차이를 더하는 과정에서 +, -로 인해 차이가 사라지게 되고, 제곱을 하므로써, 오차가 큰 거에 대해 더 큰 페널티를 줄 수 있다.
 
 ### 바이너리 크로스 엔트로피(Binary CrossEntropy)
 
 - 바이너리 크로스 엔트로피는 **이진 분류**에서 사용하고, **레이블이 0과 1**로만 나온다.
     
-    ![image.png](attachment:01ff2b3a-2008-4fbd-b34c-eb0b7776f9a8:image.png)
-    
+    ![스크린샷 2025-04-18 232714](https://github.com/user-attachments/assets/05607a04-d054-40a2-b8c5-39b235aa7043)
+
 
 ### 크로스 엔트로피(CrossEntropy)
 
 - 크로스 엔트로피는 **분류 문제**에서 사용되고, **One-Hot Encoding**을 했을 때, 사용할 수 있다.
     
-    ![image.png](attachment:af465bcb-a5f6-430b-b0d2-8d313344c802:image.png)
-    
+    ![스크린샷 2025-04-18 232944](https://github.com/user-attachments/assets/fa6fbca8-27ed-458e-a5f9-83d11ca3ab80)
+
 - 이진 분류때처럼 1, 2, 3, .. 등으로 나타내지 않는 이유는 Class간에 관계가 생기기 때문이다. 즉, **오차가 Class마다 다르게 된다.**
