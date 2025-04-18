@@ -251,9 +251,11 @@ NLP:
 dl_basic:
   - title: "DL Basic"
     children:
-      - title: "가중치 초기화"
+      - title: "[DL Basic] 인공지능, 머신러닝, 딥러닝"
+        url: /dl%20basic/2025/04/08/ai-ml-dl.html
+      - title: "[DL Basic] 가중치 초기화"
         url: /dl%20basic/2025/04/14/가중치-초기화.html
-      - title: "정규화(Regularization)"
+      - title: "[DL Basic] 정규화(Regularization)"
         url: /dl%20basic/2025/04/14/정규화.html
 
 data_struct:
