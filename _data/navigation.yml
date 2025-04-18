@@ -253,6 +253,8 @@ dl_basic:
     children:
       - title: "[DL Basic] 인공지능, 머신러닝, 딥러닝"
         url: /dl%20basic/2025/04/08/ai-ml-dl.html
+      - title: "[DL Basic] 활성화 함수 & 손실 함수"
+        url: /dl%20basic/2025/04/09/activation-loss.html
       - title: "[DL Basic] 가중치 초기화"
         url: /dl%20basic/2025/04/14/가중치-초기화.html
       - title: "[DL Basic] 정규화(Regularization)"
