@@ -1,14 +1,3 @@
----
-layout: article
-title: "[Docker] 기본 개념"
-date: 2024-09-14 14:59 +0900
-category: Product_Serving
-tags: [Product Serving]
-aside:
-  toc: true
-sidebar:
-  nav: Serving
----
 ## 가상화
 
 - 개발 시에는 주로 운영 서버가 아닌 Local에서 개발을 한다. 이 때, 개발을 진행한 Local서버와 Production 서버의 OS가 다를 경우 라이브러리 등을 설치할 때 다르게 진행을 해야 하고, 또한 OS가 같더라도 Local과 Production의 환경 변수 차이로 인해 제대로 동작하지 않을 수 있다.
@@ -17,9 +6,9 @@ sidebar:
 - 과거에는 이 가상화를 위해 VM(Virtual Machine)을 사용하였다. VM이란 실제 물리적 컴퓨터(Host Machine) 위에 OS를 포함한 가상화 소프트웨어를 두는 방식이다.
 - 하지만 이 VM은 OS 위에 OS를 하나 더 두기에 리소스를 굉장히 많이 사용한다는 단점이 있다. 이런 단점을 극복하기 위해 Container를 사용한다. Container는 **VM과 달리 OS 위에 OS를 두지않고, Host의 OS를 공유하기에 VM보다 더 가볍고 빠른 경량화된  가상화 프로세스이다.**
 
-![image.png](attachment:4f9a3712-3e0c-47b6-817b-7ff6882d1f78:image.png)
+<img width="771" height="667" alt="스크린샷 2025-09-14 145417" src="https://github.com/user-attachments/assets/e9d6e38c-cd66-40c0-b2a5-1510f816c7f9" />
 
-![image.png](attachment:d56469a2-e5b8-4291-b6f5-23f9f851e54a:image.png)
+<img width="649" height="560" alt="스크린샷 2025-09-14 150529" src="https://github.com/user-attachments/assets/1880670e-e80b-428e-805a-a9ab03f71470" />
 
 ---
 
@@ -47,7 +36,7 @@ sidebar:
     docker build -t {이미지 이름}
     ```
     
-    3. Docker Image로부터 Container를 실행한다.
+    1. Docker Image로부터 Container를 실행한다.
     
     ```bash
     docker build -d -p {연결할 포트번호} {이미지 이름}
@@ -55,10 +44,10 @@ sidebar:
     # -p: 포트를 연결하는 것
     ```
     
-    4. Docker Image를 Docker Hub나 다른 저장소에 저장한다.
+    1. Docker Image를 Docker Hub나 다른 저장소에 저장한다.
     
     ```bash
     docker push {저장할 이미지}
     ```
     
-    5. Production에서 Container를 적용한다.
+    1. Production에서 Container를 적용한다.
