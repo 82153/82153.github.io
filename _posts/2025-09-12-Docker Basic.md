@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "[Docker] 기본 개념"
-date: 2024-09-14 14:59 +0900
+date: 2024-09-12 14:59 +0900
 category: Product_Serving
 tags: [Product Serving]
 aside:
@@ -17,9 +17,9 @@ sidebar:
 - 과거에는 이 가상화를 위해 VM(Virtual Machine)을 사용하였다. VM이란 실제 물리적 컴퓨터(Host Machine) 위에 OS를 포함한 가상화 소프트웨어를 두는 방식이다.
 - 하지만 이 VM은 OS 위에 OS를 하나 더 두기에 리소스를 굉장히 많이 사용한다는 단점이 있다. 이런 단점을 극복하기 위해 Container를 사용한다. Container는 **VM과 달리 OS 위에 OS를 두지않고, Host의 OS를 공유하기에 VM보다 더 가볍고 빠른 경량화된  가상화 프로세스이다.**
 
-<img width="771" height="667" alt="스크린샷 2025-09-14 145417" src="https://github.com/user-attachments/assets/0838033a-7053-45a4-a031-7a55ea61761c" />
+<img width="600" height="450" alt="스크린샷 2025-09-14 145417" src="https://github.com/user-attachments/assets/0838033a-7053-45a4-a031-7a55ea61761c" />
 
-<img width="649" height="560" alt="스크린샷 2025-09-14 150529" src="https://github.com/user-attachments/assets/039887a3-8739-4b94-be2e-7ae84aa835e2" />
+<img width="600" height="450" alt="스크린샷 2025-09-14 150529" src="https://github.com/user-attachments/assets/039887a3-8739-4b94-be2e-7ae84aa835e2" />
 
 ---
 
@@ -32,13 +32,15 @@ sidebar:
     3. **Speed**:  Container는 VM과 달리, OS 커널을 공유하기 때문에 속도가 더 빠르다.
     4. **Efficiency**: Container는 필요한 라이브러리와 애플리케이션만 포함하기 때문에 리소스(메모리, CPU)를 VM보다 적게 사용한다.
     5. **Consistency**
+       
 - **Docker의 주요 구성 요소**
     1. **Docker Engine**: Container들을 관리하는 엔진으로 Container를 생성, 실행 관리하는 프레임 워크이다.
     2. **Docker Image**: Scripting된 Docker File로부터 만들어진 바이너리 파일로 **Read-Only**이다.
     3. **Docker Container**: 일반화된 Docker Image를 기반으로 실제 실행 중인 **인스턴스**로 Docker Container간의 Communication이 가능하다.
     4. **Docker File**: **Docker Image를 정의**하는 Script파일이다.
     5. **Docker Compose**: **여러 Docker Container를 실행**할 수 있는 도구다.
-    6. **Docker Compose**: Docker Image를 저장, 공유하는 **Cloud 기반의 저장소**이다.
+    6. **Docker Hub**: Docker Image를 저장, 공유하는 **Cloud 기반의 저장소**이다.
+       
 - **Docker의 Workflow**
     1. 개발 환경을 정의한 Docker File을 작성
     1. Docker Image를 Build한다.
