@@ -41,7 +41,7 @@ sidebar:
     6. **Docker Compose**: Docker Image를 저장, 공유하는 **Cloud 기반의 저장소**이다.
 - **Docker의 Workflow**
     1. 개발 환경을 정의한 Docker File을 작성
-    2. Docker Image를 Build한다.
+    1. Docker Image를 Build한다.
     
     ```bash
     docker build -t {이미지 이름}
@@ -50,7 +50,7 @@ sidebar:
     1. Docker Image로부터 Container를 실행한다.
     
     ```bash
-    docker build -d -p {연결할 포트번호} {이미지 이름}
+    docker run -d -p {연결할 포트번호} {이미지 이름}
     # -d: Demon(백그라운드)로 돌아가게 하는 것
     # -p: 포트를 연결하는 것
     ```
