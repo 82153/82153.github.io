@@ -17,9 +17,10 @@ sidebar:
 - 과거에는 이 가상화를 위해 VM(Virtual Machine)을 사용하였다. VM이란 실제 물리적 컴퓨터(Host Machine) 위에 OS를 포함한 가상화 소프트웨어를 두는 방식이다.
 - 하지만 이 VM은 OS 위에 OS를 하나 더 두기에 리소스를 굉장히 많이 사용한다는 단점이 있다. 이런 단점을 극복하기 위해 Container를 사용한다. Container는 **VM과 달리 OS 위에 OS를 두지않고, Host의 OS를 공유하기에 VM보다 더 가볍고 빠른 경량화된  가상화 프로세스이다.**
 
-<img width="600" height="450" alt="스크린샷 2025-09-14 145417" src="https://github.com/user-attachments/assets/0838033a-7053-45a4-a031-7a55ea61761c" />
-
-<img width="600" height="450" alt="스크린샷 2025-09-14 150529" src="https://github.com/user-attachments/assets/039887a3-8739-4b94-be2e-7ae84aa835e2" />
+<div style="display:flex; gap:10px;">
+  <img src="https://github.com/user-attachments/assets/0838033a-7053-45a4-a031-7a55ea61761c" width="400" />
+  <img src="https://github.com/user-attachments/assets/039887a3-8739-4b94-be2e-7ae84aa835e2" width="400" />
+</div>
 
 ---
 
@@ -43,24 +44,24 @@ sidebar:
        
 - **Docker의 Workflow**
     1. 개발 환경을 정의한 Docker File을 작성
-    1. Docker Image를 Build한다.
+    2. Docker Image를 Build한다.
     
-    ```bash
-    docker build -t {이미지 이름}
-    ```
+      ```bash
+      docker build -t {이미지 이름}
+      ```
     
-    1. Docker Image로부터 Container를 실행한다.
+    3. Docker Image로부터 Container를 실행한다.
     
-    ```bash
-    docker run -d -p {연결할 포트번호} {이미지 이름}
-    # -d: Demon(백그라운드)로 돌아가게 하는 것
-    # -p: 포트를 연결하는 것
-    ```
+      ```bash
+      docker run -d -p {연결할 포트번호} {이미지 이름}
+      # -d: Demon(백그라운드)로 돌아가게 하는 것
+      # -p: 포트를 연결하는 것
+      ```
     
-    1. Docker Image를 Docker Hub나 다른 저장소에 저장한다.
+    4. Docker Image를 Docker Hub나 다른 저장소에 저장한다.
     
-    ```bash
-    docker push {저장할 이미지}
-    ```
+      ```bash
+      docker push {저장할 이미지}
+      ```
     
-    1. Production에서 Container를 적용한다.
+    5. Production에서 Container를 적용한다.
