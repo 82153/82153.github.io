@@ -17,7 +17,8 @@ sidebar:
 docker pull mysql:8.0
 ```
 
-<img width="800" height="200" alt="스크린샷 2025-09-18 021054" src="https://github.com/user-attachments/assets8e3f87fc-5b42-4423-ade6-4eb3709973dc" />
+<img width="800" height="300" alt="스크린샷 2025-09-18 021054" src="https://github.com/user-attachments/assets/36235455-6535-42f0-8398-571605168e87" />
+
 - pull한 mysql이미지를 통해 Container를 실행시킨다.
 
 ```bash
