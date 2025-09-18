@@ -17,7 +17,7 @@ sidebar:
     ```
     
 
-  <img width="800" height="200" alt="스크린샷 2025-09-18 021054" src="https://github.com/user-attachments/assets/8e3f87fc-5b42-4423-ade6-4eb3709973dc" />
+    <img width="800" height="200" alt="스크린샷 2025-09-18 021054" src="https://github.com/user-attachments/assets/8e3f87fc-5b42-4423-ade6-4eb3709973dc" />
 
 1. **Docker Container 실행**
     - pull한 mysql이미지를 통해 Container를 실행시킨다.
@@ -31,7 +31,7 @@ sidebar:
     ```
     
 
-  <img width="800" height="200" alt="스크린샷 2025-09-18 161554" src="https://github.com/user-attachments/assets/7a3bc6e9-be65-4b56-be4b-ef0b00404450" />
+    <img width="800" height="200" alt="스크린샷 2025-09-18 161554" src="https://github.com/user-attachments/assets/7a3bc6e9-be65-4b56-be4b-ef0b00404450" />
 
 1. **DBeaver에 연동하기**
     - 데이터베이스 → 새 데이터베이스 연결을 클릭 한 뒤에 mysql을 선택한다.
