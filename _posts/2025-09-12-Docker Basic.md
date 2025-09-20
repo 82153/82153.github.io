@@ -70,9 +70,9 @@ sidebar:
 
 ## Docker Volume
 
-- **Docker Container**는 Image 위에 **writable layer**를 덧붙여 실행되는 인스턴스이다. 이 writable layer는 컨테이너와 함께 존재하기 때문에, 컨테이너를 **삭제**하면 내부에 저장했던 파일도 함께 사라진다. → 즉, Container는 **휘발성**
-- 이러한 컨테이너의 휘발성을 보완하기 위해 나온 개념이 **Docker Volume**으로 **Docker Volume**은 컨테이너 **외부**에 존재하며, **Docker 엔진이 직접 관리**하는 독립적인 저장소이다. 즉, 특정 host 디렉토리에 종속되지 않고 Docker 자체가 데이터를 관리합니다.
-- 이를 통해 데이터의 **영속성(persistence)을 보장**하고, 여러 컨테이너 간 **데이터 공유**도 가능합니다.
+- **Docker Container**는 Image 위에 **writable layer**를 덧붙여 실행되는 인스턴스이다. 이 writable layer는 컨테이너와 함께 존재하기 때문에, 컨테이너를 삭제하면 내부에 저장했던 파일도 함께 사라진다. → 즉, Container는 **휘발성**
+- 이러한 컨테이너의 휘발성을 보완하기 위해 나온 개념이 **Docker Volume**으로 **Docker Volume**은 컨테이너 외부에 존재하며, **Docker 엔진이 직접 관리**하는 독립적인 저장소이다. 즉, 특정 host 디렉토리에 종속되지 않고 Docker 자체가 데이터를 관리한다.
+- 이를 통해 데이터의 **영속성(persistence)을 보장**하고, 여러 컨테이너 간 **데이터 공유**도 가능하다.
 - **Docker Volume의 종류**
     1. **Anonymous Volume**: 이름 없이 생성되는 볼륨으로, 컨테이너 실행 시 자동으로 만들 수 있다.
     2. **Named Volume**: 이름을 붙여준 볼륨으로 관리 및 재사용이 쉽다.
