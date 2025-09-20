@@ -2,12 +2,12 @@
 layout: article
 title: "[Docker] 기본 Command"
 date: 2025-09-14 15:53 +0900
-category: Product_Serving
-tags: [Product Serving]
+category: Docker
+tags: [Docker]
 aside:
   toc: true
 sidebar:
-  nav: Serving
+  nav: Docker
 ---
 ## General Command
 

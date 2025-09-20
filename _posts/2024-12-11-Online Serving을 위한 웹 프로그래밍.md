@@ -2,12 +2,12 @@
 layout: article
 title: "[FastAPI] Background For FastAPI"
 date: 2024-12-12 11:12 +0900
-category: Product_Serving
-tags: [Product Serving]
+category: FastAPI
+tags: [FastAPI]
 aside:
   toc: true
 sidebar:
-  nav: Serving
+  nav: Airflow
 ---
 ## Online Serving
 

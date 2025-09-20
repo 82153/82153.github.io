@@ -2,12 +2,12 @@
 layout: article
 title: "[Docker] Docker mysql 설치 및 DBeaver 연결"
 date: 2025-09-18 17:03 +0900
-category: Product_Serving
-tags: [Product Serving]
+category: Docker
+tags: [Docker]
 aside:
   toc: true
 sidebar:
-  nav: Serving
+  nav: Docker
 ---
 ## Docker Hub에서 mysql 이미지 불러오기 및 Container 실행
 

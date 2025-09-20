@@ -2,12 +2,12 @@
 layout: article
 title: "[Docker] 기본 개념"
 date: 2025-09-12 14:59 +0900
-category: Product_Serving
-tags: [Product Serving]
+category: Docker
+tags: [Docker]
 aside:
   toc: true
 sidebar:
-  nav: Serving
+  nav: Docker
 ---
 ## 가상화
 

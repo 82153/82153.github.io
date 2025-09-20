@@ -77,27 +77,35 @@ lightweighting:
       - title: "[Distributed Training] Model Parallelism"
         url: /lightweighting_optimization/2024/12/30/modelparallel.html
 
-Serving:
+Airflow:
   - title: "Airflow"
     children:
       - title: "[Airflow]Batch Serving과 Airflow"
         url: /product_serving/2024/12/15/Batch-Serving%EA%B3%BC-Airflow.html
       - title: "[Airflow]Airflow 실습"
         url: /product_serving/2024/12/19/Airflow실습.html
+
+FastAPI:
   - title: "FastAPI"
     children:
       - title: "[FastAPI] Background For FastAPI"
         url: /product_serving/2024/12/12/Online-Serving을-위한-웹-프로그래밍.html
       - title: "[FastAPI] 기본 사용법"
         url: /product_serving/2024/12/12/FastAPI-기본.html
+
+MLflow:
   - title: "MLflow"
     children:
       - title: "[MLflow]MLflow를 이용한 모델 관리 및 모델 평가"
         url: /product_serving/2024/12/17/모델-관리와-모델-평가.html
+
+Cloud:
   - title: "Cloud"
     children:
       - title: "[Cloud]Cloud Service"
         url: /product_serving/2024/12/16/Cloud_Service.html
+
+Docker:
   - title: "Docker"
     children:
       - title: "[Docker] 기본 개념"

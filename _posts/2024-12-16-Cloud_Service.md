@@ -2,12 +2,12 @@
 layout: article
 title: "[Cloud]Cloud Service"
 date: 2024-12-16 20:01 +0900
-category: Product_Serving
-tags: [Product Serving]
+category: Cloud
+tags: [Cloud]
 aside:
   toc: true
 sidebar:
-  nav: Serving
+  nav: Cloud
 ---
 ## Cloud Service
 
