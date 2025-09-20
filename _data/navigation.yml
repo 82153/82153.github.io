@@ -89,7 +89,7 @@ FastAPI:
   - title: "FastAPI"
     children:
       - title: "[FastAPI] Background For FastAPI"
-        url: /fastapi/2024/12/12/Online-Serving을-위한-웹-프로그래밍.html
+        url: /fastapi/2024/12/11/Online-Serving을-위한-웹-프로그래밍.html
       - title: "[FastAPI] 기본 사용법"
         url: /fastapi/2024/12/12/FastAPI-기본.html
 
