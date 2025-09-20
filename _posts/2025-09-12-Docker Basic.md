@@ -65,3 +65,24 @@ sidebar:
         ```
     
     1. Production에서 Container를 적용한다.
+
+---
+
+## Docker Volume
+
+- **Docker Container**는 Image 위에 **writable layer**를 덧붙여 실행되는 인스턴스이다. 이 writable layer는 컨테이너와 함께 존재하기 때문에, 컨테이너를 **삭제**하면 내부에 저장했던 파일도 함께 사라진다. → 즉, Container는 **휘발성**
+- 이러한 컨테이너의 휘발성을 보완하기 위해 나온 개념이 **Docker Volume**으로 **Docker Volume**은 컨테이너 **외부**에 존재하며, **Docker 엔진이 직접 관리**하는 독립적인 저장소이다. 즉, 특정 host 디렉토리에 종속되지 않고 Docker 자체가 데이터를 관리합니다.
+- 이를 통해 데이터의 **영속성(persistence)을 보장**하고, 여러 컨테이너 간 **데이터 공유**도 가능합니다.
+- **Docker Volume의 종류**
+    1. **Anonymous Volume**: 이름 없이 생성되는 볼륨으로, 컨테이너 실행 시 자동으로 만들 수 있다.
+    2. **Named Volume**: 이름을 붙여준 볼륨으로 관리 및 재사용이 쉽다.
+    3. **Bind Mounts**: Local과 Container의 디렉토리를 연결한 것으로 Docker외부에서 관리한다.
+
+---
+
+## Docker Compose
+
+- **Docker Compose**는 Local 환경에서 여러 개의 Docker 컨테이너를 동시에 실행하고 관리할 수 있게 해주는 도구이다. → 즉, 복잡한 애플리케이션을 **단일 애플리케이션처럼** 관리할 수 있다.(**Multi-Container Orchestration**)
+- compose.yml 파일에 **services, volumes, networks** 등을 정의하고, 설정된 모든 서비스를 한 번에 생성 및 실행할 수 있다.
+- compose.yml 파일에 정의된 서비스들은 서로 **독립적**이며(**Service Independence**), 개발·스테이징·운영 환경 등에서 **일관성 있게 재사용**할 수 있다.(**Portability**)
+- 또한 단순한 명령어로 쉽게 환경을 구성하거나 해제할 수 있으며(**Simplified Workflow**), compose.yml 파일을 통해 서비스와 네트워크를 **선언적으로 간단히 정의**할 수 있다.(**Declarative Configuration**)

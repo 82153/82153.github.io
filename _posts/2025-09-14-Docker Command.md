@@ -184,3 +184,78 @@ sidebar:
     ```bash
     docker events
     ```
+
+---
+
+## Docker Volume Command
+
+1. **Docker Volume 생성**
+    
+    ```bash
+    docker volume create {volume 이름} # named volume 생성
+    docker run -v {Volume을 mount할 위치} {image 이름} # anonymous volume 생성
+    docker run -v {local의 위치}:{volume을 mount할 위치} {image 이름} # bind mounts 생성
+    ```
+    
+2. **Docker Volume들 확인**
+    
+    ```bash
+    docker volume ls
+    ```
+    
+3. **Docker Volume에 대한 정보 확인**
+    
+    ```bash
+    docker volume inspect {volume 이름}
+    ```
+    
+4. **Docker Volume 삭제**
+    
+    ```bash
+    docker volume rm {volume 이름}
+    ```
+    
+5. **사용하지 않는 Volume 삭제**
+    
+    ```bash
+    docker volume prune
+    ```
+    
+
+---
+
+## Docker Compose Command
+
+1. **Compose 실행**
+   - compose.yml파일을 기반으로 compose 실행
+    
+    ```bash
+    docker-compose up
+    # docker-compose up --build: 이미지 build후에 compose 실행
+    ```
+    
+2. **Compose 중지**
+    
+    ```bash
+    docker-compose down
+    # -v 옵션을 주어 volume까지 삭제 가능
+    ```
+    
+3. **Compose 실행 여부 확인**
+    
+    ```bash
+    docker-compose ps
+    ```
+    
+4. **Compose 로그 확인**
+    
+    ```bash
+    docker-compose logs
+    # -f 옵션으로 실시간 log확인 가능
+    ```
+    
+5. **특정 Service만 재시작**
+    
+    ```bash
+    docker-compose restart {service_name}
+    ```
