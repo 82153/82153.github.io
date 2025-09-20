@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "[CV] Image Classification Model 정리"
-date: 2025-09-12 14:59 +0900
+date: 2025-02-11 14:59 +0900
 category: CV
 tags: [CV]
 aside:
