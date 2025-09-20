@@ -7,7 +7,7 @@ tags: [FastAPI]
 aside:
   toc: true
 sidebar:
-  nav: Airflow
+  nav: FastAPI
 ---
 ## Online Serving
 
