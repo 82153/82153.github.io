@@ -52,7 +52,7 @@ sidebar:
 - 위 그림을 보면 test error를 보면 층이 더 깊은 모델이 error가 더 크지만, training error 또한 더 깊은 모델이 더 크다. 이는 우리가 일반적으로 아는 OverFitting에서 나타나는 현상과 다르다.
 - 이는 **Degradation Problem**으로 학습 난이도가 올라가서 학습이 잘 안되는 **Optimization 문제**라는 것이다.
 
-<img width="400" height="250" alt="스크린샷 2025-09-21 152536" src="https://github.com/user-attachments/assets/b79d18a3-32fb-4d52-9721-2826f5627a1e" />
+<img width="400" height="150" alt="스크린샷 2025-09-21 151641" src="https://github.com/user-attachments/assets/024ca4a1-fb9b-4567-90b9-364c81385268" />
 
 - 이를 해결하기 위해 ResNet에서 도입한 것이 **Residual Connection**이다. Residual Connection은 단순하게 Conv Block의 Output($F(x)$)에 Input($x$)를 더한 것이다.
 - $H(x) = F(x) + x$를 Conv Block의 Output으로 사용하므로써, Weight Layer가 학습시 사용하게 되는 Gradient는 F(x)에서 오는 것으로 이는 $H(x) - x$로서 단순히 **Input과 Output의 차이(Residual)만을 학습**하게 되어 더 단순하게 학습할 수 있게 되어 Degradation Problem을 해결할 수 있었다.
