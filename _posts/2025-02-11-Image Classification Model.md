@@ -47,12 +47,12 @@ sidebar:
 - ResNet은 이전의 VGGNet에서 19 Layer까지 밖에 못 쌓았던 한계를 Residual Connection을 통해 해결한 모델이다.
 - VGGNet에서 더 깊이 못 쌓은 원인 중에 OverFitting문제를 지적했지만 ResNet에서는 이는 OverFitting이 문제가 아니라고 말한다.
 
-<img width="400" height="300" alt="스크린샷 2025-09-21 151641" src="https://github.com/user-attachments/assets/dce1555b-9ad0-47c2-8198-b5a7d6305db2" />
+<img width="400" height="150" alt="스크린샷 2025-09-21 151641" src="https://github.com/user-attachments/assets/024ca4a1-fb9b-4567-90b9-364c81385268" />
 
 - 위 그림을 보면 test error를 보면 층이 더 깊은 모델이 error가 더 크지만, training error 또한 더 깊은 모델이 더 크다. 이는 우리가 일반적으로 아는 OverFitting에서 나타나는 현상과 다르다.
 - 이는 **Degradation Problem**으로 학습 난이도가 올라가서 학습이 잘 안되는 **Optimization 문제**라는 것이다.
 
-<img width="400" height="150" alt="스크린샷 2025-09-21 151641" src="https://github.com/user-attachments/assets/024ca4a1-fb9b-4567-90b9-364c81385268" />
+<img width="400" height="300" alt="스크린샷 2025-09-21 152536" src="https://github.com/user-attachments/assets/a02476c6-36e0-4430-b84f-811b0a45e3b4" />
 
 - 이를 해결하기 위해 ResNet에서 도입한 것이 **Residual Connection**이다. Residual Connection은 단순하게 Conv Block의 Output($F(x)$)에 Input($x$)를 더한 것이다.
 - $H(x) = F(x) + x$를 Conv Block의 Output으로 사용하므로써, Weight Layer가 학습시 사용하게 되는 Gradient는 F(x)에서 오는 것으로 이는 $H(x) - x$로서 단순히 **Input과 Output의 차이(Residual)만을 학습**하게 되어 더 단순하게 학습할 수 있게 되어 Degradation Problem을 해결할 수 있었다.
