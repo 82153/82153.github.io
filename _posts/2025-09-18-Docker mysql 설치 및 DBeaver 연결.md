@@ -38,7 +38,7 @@ docker run --name {Container 이름} \
 - 데이터베이스 → 새 데이터베이스 연결을 클릭 한 뒤에 mysql을 선택한다.
     
     <img width="600" height="400" alt="스크린샷 2025-09-18 161922" src="https://github.com/user-attachments/assets/319e12e7-2b32-4279-8de5-584cf4a383e5" />
-- 이후에 내가 Docker Container 실행 시에 작성한 **local의 host**로 맞춰주고, 비번을 작성해준다.
+- 이후에 내가 Docker Container 실행 시에 작성한 **local의 Port**로 맞춰주고, 비번을 작성해준다.
     
     <img width="600" height="400" alt="스크린샷 2025-09-18 162601" src="https://github.com/user-attachments/assets/8fa6e17f-c92a-48df-8120-6819c8075ae1" />
 - 그 다음에 Drive properties로 들어가서 **allowPublicKeyRetrieval**을 true로 변경해주고 완료를 누르면 dbeaver에연동은 끝났다.
