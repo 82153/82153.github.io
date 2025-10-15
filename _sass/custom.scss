@@ -1,6 +1,6 @@
 /* === Custom Sidebar Style Override === */
 .page__sidebar {
-  background-color: #F9FBFD !important;
+  background-color: #fff !important; /* 사이드바 전체 배경은 흰색 */
   border-right: 1px solid rgba(0,0,0,0.05);
   padding: 1.5rem 1rem;
 }
@@ -20,25 +20,24 @@
   transition: all 0.2s ease;
 }
 
+/* Hover 효과 */
 .page__sidebar a:hover {
   background-color: rgba(#BEEEE2, 0.5);
   color: #0077B6;
 }
 
-.page__sidebar a.active {
-  background-color: #BEEEE2 !important;
-  border-left: 4px solid #0077B6; 
-  color: #002B5B;
+/* 현재 페이지(active) 링크에만 배경 */
+.page__sidebar .toc .toc-h2.active > a {
+  background: #BEEEE2 !important;     /* ✅ 원하는 배경색 */
+  color: #002B5B !important;
+  border-left: 4px solid #0077B6;      /* 포인트 라인 */
+  border-radius: 6px;
   font-weight: 600;
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.05); 
-  transition: background-color 0.3s ease, border-left 0.3s ease;
 }
 
-// .page__sidebar a.active {
-//   background-color: rgba(#A8C3E2, 0.4);
-//   border-left: 3px solid #0077B6;
-//   color: #002B5B;
-//   font-weight: 600;
-// }
+/* 기본 active 스타일 (위의 .toc-h2.active > a와 중복되지 않도록 제거 가능) */
+.page__sidebar a.active {
+  background: none; /* 불필요하므로 제거하거나 none으로 초기화 */
+}
 
 /* end custom scss snippet */
