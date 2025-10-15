@@ -70,5 +70,13 @@ $linkedin-color:   #1074af;
 $github-color:     #000;
 $npm-color:        #fff;
 
+// link colors(직접 추가한 것)
+$link-color: #0077b6;
+$link-hover-color: #00b4d8;
+
+$border-color: rgba(#000, .1);
+$footer-background: #A8C3E2;
+$select-color: rgba($main-color-2, .4);
+
 // highlight colors
 @import "skins/highlight/tomorrow";
