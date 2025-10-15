@@ -33,4 +33,13 @@
   font-weight: 600;
 }
 
+/* === 자동 Active 강조 (URL 매칭 기반) === */
+.page__sidebar a[href*="#{page.url}"] {
+  background-color: rgba(#A8C3E2, 0.4);
+  border-left: 3px solid #0077B6;
+  color: #002B5B;
+  font-weight: 600;
+}
+
+
 /* end custom scss snippet */
