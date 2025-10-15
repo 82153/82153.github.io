@@ -8,17 +8,17 @@
 $main-color-1:     #0077b6; //#fc4d50;
 $text-color-1:     #fff;
 
-$main-color-2:     #00b4d8; //#fca24d;
-$text-color-2:     #fff;
+$main-color-2:     #BEEEE2; //#fca24d;
+$text-color-2:     #002b5b;//#fff;
 
-$main-color-3:     #BEEEE2; // #f2f2f2;
+$main-color-3:     #A8C3E2; // #f2f2f2;
 $text-color-3:     #002b5b; // #333;
 
 $main-color-theme-light: rgba(#000, .9);
 $main-color-theme-dark:  rgba(#fff, .9);
 
 // page background
-$background-color: #A8C3E2;//#fff;
+$background-color: #fff;
 
 // text colors
 $text-color-theme-light-d: #000;
@@ -33,7 +33,7 @@ $text-color-d:     $text-color-theme-light-d;
 $text-color:       $text-color-theme-light;
 $text-color-l:     $text-color-theme-light-l;
 
-$text-background-color: rgba(#0077b6, .08); // $text-background-color: rgba(#000, .05);
+$text-background-color: #BEEEE2; // $text-background-color: rgba(#000, .05);
 
 // header and footer colors
 $header-text-color: $text-color-3;
@@ -69,14 +69,6 @@ $douban-color:     #42bd56;
 $linkedin-color:   #1074af;
 $github-color:     #000;
 $npm-color:        #fff;
-
-// link colors(직접 추가한 것)
-$link-color: #0077b6;
-$link-hover-color: #00b4d8;
-
-$border-color: rgba(#000, .1);
-$footer-background: #A8C3E2;
-$select-color: rgba($main-color-2, .4);
 
 // highlight colors
 @import "skins/highlight/tomorrow";
