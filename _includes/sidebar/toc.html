@@ -11,11 +11,18 @@
             {%- assign _nav_url = __return -%}
             {%- include snippets/get-nav-url.html path=page.url -%}
             {%- assign _page_url = __return -%}
-            {%- if _nav_url == _page_url -%}
+            {%- assign _nav_url_normalized = _nav_url | downcase | uri_escape -%}
+            {%- assign _page_url_normalized = _page_url | downcase | uri_escape -%}
+            {%- if _nav_url_normalized == _page_url_normalized -%}
               <li class="toc-h2 active"><a href="{{ _nav_url }}">{{ _child.title }}</a></li>
             {%- else -%}
               <li class="toc-h2"><a href="{{ _nav_url }}">{{ _child.title }}</a></li>
             {%- endif -%}
+            <!-- {%- if _nav_url == _page_url -%}
+              <li class="toc-h2 active"><a href="{{ _nav_url }}">{{ _child.title }}</a></li>
+            {%- else -%}
+              <li class="toc-h2"><a href="{{ _nav_url }}">{{ _child.title }}</a></li>
+            {%- endif -%} -->
           {%- endfor -%}
         {%- endif -%}
       {%- endfor -%}
