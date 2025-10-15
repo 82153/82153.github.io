@@ -1,3 +1,36 @@
 /* start custom scss snippet */
+/* === Custom Sidebar Style Override === */
+.page__sidebar {
+  background-color: #F9FBFD !important;
+  border-right: 1px solid rgba(0,0,0,0.05);
+  padding: 1.5rem 1rem;
+}
+
+.page__sidebar .sidebar-title {
+  color: #002B5B;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.page__sidebar a {
+  display: block;
+  color: #444;
+  text-decoration: none;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.page__sidebar a:hover {
+  background-color: rgba(#BEEEE2, 0.5);
+  color: #0077B6;
+}
+
+.page__sidebar a.active {
+  background-color: rgba(#A8C3E2, 0.4);
+  border-left: 3px solid #0077B6;
+  color: #002B5B;
+  font-weight: 600;
+}
 
 /* end custom scss snippet */
