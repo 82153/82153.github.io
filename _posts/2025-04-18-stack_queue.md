@@ -13,8 +13,8 @@ sidebar:
 
 - 스택은 이름 그대로 차곡차곡 **쌓아 올린 형태의 자료 구조**를 나타낸다.
     
-    ![image.png](attachment:946d1271-3cea-4d9c-8b4f-037165a19317:image.png)
-    
+    <img width="600" height="400" alt="스크린샷 2025-10-22 145116" src="https://github.com/user-attachments/assets/2bc9eae2-1fcb-4d3d-a15b-f2724fa136ae" />
+
 
 ---
 
@@ -44,8 +44,8 @@ sidebar:
 
 - 큐는 데이터를 차례대로 처리하기 위한, 일종의 대기줄(Queue) 형태의 자료구조이다.
     
-    ![image.png](attachment:d4556b97-d37b-42cb-8ee5-10188722f17e:image.png)
-    
+    <img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/05c5c527-d156-444d-a978-396259ae9236" />
+
 
 ---
 
