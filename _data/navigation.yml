@@ -303,3 +303,9 @@ python:
         url: /python/2025/09/22/lambda.html
       - title: "[Python] Sorting(정렬)"
         url: /python/2025/09/25/sorting.html
+
+wandb:
+  - title: "WandB"
+    children:
+      - title: "[WandB] WandB 기본"
+        url: /wandb/2025/10/17/wandb/html
