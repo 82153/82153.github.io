@@ -301,3 +301,5 @@ python:
     children:
       - title: "[Python] lambda 함수"
         url: /python/2025/09/22/lambda.html
+      - title: "[Python] Sorting(정렬)"
+        url: /python/2025/09/25/sorting.html
