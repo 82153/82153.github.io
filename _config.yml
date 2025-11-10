@@ -18,11 +18,11 @@
 ##############################
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: tomorrow-night # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : # the base hostname & protocol for your site e.g. https://www.someone.com
-baseurl : # does not include hostname
+url     : "https://82153.github.io" # the base hostname & protocol for your site e.g. https://www.someone.com
+baseurl : "" # does not include hostname
 title   : Blog
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
+  DeepLearning
 
 
 ## => Language and Timezone
@@ -35,7 +35,7 @@ timezone: Asia/Seoul # see https://en.wikipedia.org/wiki/List_of_tz_database_tim
 ##############################
 author:
   type      : # "person" (default), "organization"
-  name      : Your Name
+  name      : 김동욱
   url       :
   avatar    : # path or url of avatar image (square)
   bio       : I am an amazing person.
@@ -49,13 +49,13 @@ author:
   zhihu     : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
   douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
   linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
-  github    : # "user_name" the last part of your profile url, e.g. https://github.com/user_name
+  github    : 82153 # "user_name" the last part of your profile url, e.g. https://github.com/user_name
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: user_name/repo_name
+repository: 82153/82153.github.io
 repository_tree: master
 
 
@@ -223,3 +223,4 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+  - jekyll-seo-tag
