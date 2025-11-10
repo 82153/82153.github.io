@@ -16,7 +16,6 @@ sidebar:
 
 - 가중 합의 결과를 [0 ~ 1] 사이에서 비선형 형태로 바꿔준다.
     
-    ![스크린샷 2025-04-18 214059](https://github.com/user-attachments/assets/a7cfe82b-6afd-4961-8a1c-05896181e7fa)
     <img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/3846643a-0f9f-4a1a-a6be-eec73fe5f3f7" />
 
 - 주로 로지스틱 회귀 같은 분류 문제에서 주로 사용했다.
@@ -31,7 +30,8 @@ sidebar:
 
 - 하이퍼볼릭 탄젠트는 가중 합의 결과를 [-1 ~ 1]사이에서 비선형 형태로 변형해준다.
     
-    ![스크린샷 2025-04-18 220658](https://github.com/user-attachments/assets/0e030d08-396e-42cc-a833-97f7cf151fa7)
+    <img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/e5cf5541-5ed9-4ead-b4f8-41975e1bbe39" />
+
 
 - **Sigmoid에서 양수만 나오는 문제를 해결**하였다. 하지만 여전히 기울기가 [0 ~ 1]사이로 딥러닝이 깊어지며 발생하는 **기울기 소멸 문제가 발생**한다.
 
@@ -39,21 +39,40 @@ sidebar:
 
 - 최근 가장 활발하게 사용되는 활성화 함수이다. input이 음수이면 0을 출력하고, 양수이면 x를 출력한다. 이는 경사하강법에 영향을 주지 않아 **학습 속도가 빠르고, 기울기 소멸 문제가 발생하지 않는다.**
     
-    ![스크린샷 2025-04-18 221730](https://github.com/user-attachments/assets/b9c39a4b-fe2d-4c0e-b9de-0647604e86ef)
+    <img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/695969f0-05da-41c0-bd3a-91cf487ed022" />
 
-- 하지만 음수는 항상 0으로 처리하기에 학습 능력이 떨어질 수 있다.
+- 하지만 음수는 항상 0으로 처리하여, 기울기가 0이 되는 정보가 손실되는 **Dying ReLU 문제**가 발생한다. 즉, 0보다 작은 값들이 많이 나온다면 파라미터 업데이트가 원활하지 못하다.
 
 ### **Leaky ReLU = x if x > 0 else $\alpha$x**
 
-- ReLU에서 음수를 항상 0을 출력하는 문제를 해결하기 위해 **음수 부분에 매우 작은 기울기**를 주는 방법이다.
+- ReLU에서 음수를 항상 0을 출력하는 문제를 해결하기 위해 **음수 부분에 매우 작은 기울기**를 주는 방법이다. 음수 부분에 주는 기울기는 하이퍼 파라미터로 사전에 정의해줘야한다.
     
-    ![스크린샷 2025-04-18 222113](https://github.com/user-attachments/assets/8dfd6c50-8918-4782-9538-85a0644f81a0)
+    <img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/b50e97c8-ae90-4964-8cee-06ebcb7fc1d8" />
 
+- 이 음수 부분의 기울기($\alpha$)를 학습하는 방식으로 **PReLU**가 존재한다.
 
 ### Softmax = $\frac {exp(a)}{\sum_{i=1}^{n}{exp(a)}}$(n = 출력층의 개수)
 
 - 소프트맥스는 입력값을 [0~1] 사이로 출력되도록 정규화하여 출력값들의 값이 항상 1이 된다.
 - 주로 출력 노드의 활성화 함수로 많이 사용된다.
+
+### **그 외의 활성화 함수**
+
+- **ELU**: ReLU의 음수 영역 문제를 완화하기 위해 음수 부분에 지수함수를 적용한 활성화 함수이다.
+- **GELU**: 입력값이 활성화될 확률을 정규분포 기반으로 반영하며, BERT, GPT 등에서 사용되었다.
+- **SiLU(Swish)**: x * sigmoid(x) 형태의 부드러운 비선형 함수로, 깊은 네트워크에서 학습 안정성이 좋다.
+- **Mish**: x * tanh(softplus(x)) 형태로, SiLU보다 음수 영역 곡률이 더 완만하여 표현력이 더 유연하다.
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/744e6316-52ac-4d06-ad68-ccd240837b28" width="300" height="200" alt="image"></td>
+    <td><img src="https://github.com/user-attachments/assets/78c73f3d-b5a6-483c-a126-daaf8f4cf8b9" width="300" height="200" alt="image"></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/f8897c69-4429-4334-8be3-a29f82b4c5a0" width="300" height="200" alt="image"></td>
+    <td><img src="https://github.com/user-attachments/assets/8ce5d178-e9c7-4534-b099-8a3056bb9dd3" width="300" height="200" alt="image"></td>
+  </tr>
+</table>
 
 ---
 
