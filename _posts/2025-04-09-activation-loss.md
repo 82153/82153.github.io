@@ -103,3 +103,4 @@ sidebar:
     ![스크린샷 2025-04-18 232714](https://github.com/user-attachments/assets/05607a04-d054-40a2-b8c5-39b235aa7043)
 
 - 이진 분류때처럼 1, 2, 3, .. 등으로 나타내지 않는 이유는 Class간에 관계가 생기기 때문이다. 즉, **오차가 Class마다 다르게 된다.**
+- 크로스 엔트로피에 대한 자세한 내용은 [정보 엔트로피](https://82153.github.io/mathematics/2025/10/20/entropy.html)
