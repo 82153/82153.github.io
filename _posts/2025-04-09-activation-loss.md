@@ -17,10 +17,12 @@ sidebar:
 - 가중 합의 결과를 [0 ~ 1] 사이에서 비선형 형태로 바꿔준다.
     
     ![스크린샷 2025-04-18 214059](https://github.com/user-attachments/assets/a7cfe82b-6afd-4961-8a1c-05896181e7fa)
+    <img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/3846643a-0f9f-4a1a-a6be-eec73fe5f3f7" />
 
 - 주로 로지스틱 회귀 같은 분류 문제에서 주로 사용했다.
 - 하지만 모델의 깊이가 깊어지며 발생하는 **기울기 소멸 문제가 발생**하여 잘 사용하지 않는다. Sigmoid의 미분 값을 보면 값들이 [0 ~ 0.25] 사이이다. 이는 역전파 시에 기울기가 계속 줄어든다는 의미이고, 계속 곱해지다보면 기울기가 소멸하게 된다.
 - 또한 함수의 값이 모두 양수(Non-zero centered)로 학습 시에 **모든 파라미터가 동일한 방향으로 학습하게 되어 불안정한 학습**을 하게 된다.
+- 이와 같이 모든 가중치의 업데이트가 같은 방향으로 이뤄지는 문제를 **Zig-Zag문제**라고 한다.
     
     ![스크린샷 2025-04-18 220458](https://github.com/user-attachments/assets/b6e73b42-faa5-4690-a368-1de021bf6c6b)
 
