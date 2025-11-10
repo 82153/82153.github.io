@@ -309,3 +309,9 @@ wandb:
     children:
       - title: "[WandB] WandB 기본"
         url: /wandb/2025/10/17/wandb/html
+
+mathematics:
+  - title: "Entropy"
+    children:
+      - title: "[Mathematics] 정보 엔트로피"
+        url: /mathematics/2025/10/20/entropy/html
