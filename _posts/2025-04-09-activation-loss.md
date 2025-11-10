@@ -42,6 +42,7 @@ sidebar:
     <img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/695969f0-05da-41c0-bd3a-91cf487ed022" />
 
 - 하지만 음수는 항상 0으로 처리하여, 기울기가 0이 되는 정보가 손실되는 **Dying ReLU 문제**가 발생한다. 즉, 0보다 작은 값들이 많이 나온다면 파라미터 업데이트가 원활하지 못하다.
+- 또한, ReLU에서도 모든 값이 0 이상이고, 기울기도 0 아님 1이 나온다. 즉, ReLU 또한 **Zig-Zag문제**를 겪을 수 있다.
 
 ### **Leaky ReLU = x if x > 0 else $\alpha$x**
 
