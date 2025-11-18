@@ -36,7 +36,7 @@ sidebar:
 - 위와 같은 내부 공변량 변화 외에도, 활성화 함수의 동작 관점에서도 배치 정규화가 필요한 이유가 있다. 활성화 함수의 입력이 극단적인 값으로 치우치면, 해당 층의 비선형성이 제대로 작동하지 않아 학습이 원활히 이루어지지 않는다.
 - 활성화 함수를 거치기 전에 우리는 $\sum{wx}$를 계산하는데, 이 값은 우리가 가중치 초기화를 하더라도 어떻게 변화할 지 알 수 없다. 이 값이 극단적인 분포를 가질 경우, 문제가 발생할 수 있다.
 
-<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/28cb52b4-cb10-4d6e-851c-726e622ec2a8" />
+<img width="600" height="800" alt="image" src="https://github.com/user-attachments/assets/28cb52b4-cb10-4d6e-851c-726e622ec2a8" />
   
 - 예를 들어 Sigmoid함수를 사용할 때, $\sum{wx}$가 극단적인 음수 분포나 극단적인 양수 분포를 가지게 되었다고 생각해보면, 이 값들의 Sigmoid 값들은 0 혹은 1에 근사하고, 이에 따라 역전파 시에 **Vanishing Gradient문제가 발생**한다.
 - ReLU의 경우에서는 극단적인 음수 분포에서는 **Vanishing Gradient문제**가 발생하고, 극단적인 양수 분포에서는 모든 기울기가 1이 되어 모두 동등하게 학습되기에 **특징 추출이 어려워 Overfitting**이 발생할 수 있다.
