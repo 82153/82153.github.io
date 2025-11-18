@@ -275,8 +275,10 @@ dl_basic:
         url: /dl%20basic/2025/04/10/경사하강법.html
       - title: "[DL Basic] 가중치 초기화"
         url: /dl%20basic/2025/04/14/가중치-초기화.html
+      - title: "[DL Basic] 배치 정규화"
+        url: /dl%20basic/2025/04/16/batch_norm.html
       - title: "[DL Basic] 정규화(Regularization)"
-        url: /dl%20basic/2025/04/14/정규화.html
+        url: /dl%20basic/2025/04/20/정규화.html
 
 data_struct:
   - title: "자료구조"
